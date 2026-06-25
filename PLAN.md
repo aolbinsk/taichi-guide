@@ -68,7 +68,8 @@ index.html ─ vite ─ src/
 ## Open questions for the next iteration
 1. **Which Yang 108 enumeration is canonical for you?** Lineages differ on
    counts/order; seed uses a common one — confirm so numbering is "right."
-2. **Audio source:** authentic recordings (per spec) vs. TTS placeholder for dev?
+2. ~~Audio source~~ **Decided:** TTS-generated Mandarin audio for now (fast,
+   consistent); revisit authentic human recordings later if quality warrants.
 3. **Tag taxonomy:** is the current set (stance/kick/hand-deflection/strike/
    transition/opening-closing/cloud-hands/repetitive) the right vocabulary?
 4. **Swedish descriptions:** seed has best-effort SV — who reviews/owns them?
