@@ -11,6 +11,11 @@ export const UI = {
     media: { audio: 'Audio', video: 'Video', rig: '3D', image: 'Image' },
     repeatOf: (seq: number) => `Repeat of #${seq}`,
     clearFilters: 'Clear',
+    chooseForm: 'Choose form',
+    changeForm: 'Change form',
+    postures: (n: number) => `${n} postures`,
+    loadingForm: 'Loading form…',
+    unverified: 'Draft — pending verification',
   },
   sv: {
     searchPlaceholder: 'Sök ställningar…',
@@ -21,6 +26,11 @@ export const UI = {
     media: { audio: 'Ljud', video: 'Video', rig: '3D', image: 'Bild' },
     repeatOf: (seq: number) => `Upprepning av #${seq}`,
     clearFilters: 'Rensa',
+    chooseForm: 'Välj form',
+    changeForm: 'Byt form',
+    postures: (n: number) => `${n} ställningar`,
+    loadingForm: 'Laddar form…',
+    unverified: 'Utkast — väntar på granskning',
   },
 } satisfies Record<UiLang, unknown>;
 

@@ -84,3 +84,39 @@ export interface FormData {
   milestones: Milestone[];
   postures: Posture[];
 }
+
+// ---------------------------------------------------------------------------
+// Catalog model: families (styles) and the switchable form library.
+//
+// The catalog is intentionally lightweight and loaded eagerly so the switcher
+// can render every form without pulling in any posture data. Each form's full
+// FormData is fetched lazily (its own bundle chunk) only when selected.
+// ---------------------------------------------------------------------------
+
+/** Tai Chi family lineages. */
+export type StyleId = 'yang' | 'chen' | 'wu' | 'wuhao' | 'sun' | 'combined';
+
+export interface StyleMeta {
+  id: StyleId;
+  /** Family name across languages, e.g. Yang / 杨. */
+  name: TranslatableNames;
+  /** One-line description of the family, shown in the switcher. */
+  blurb: Description;
+}
+
+/** A catalog entry for one switchable form. No posture data — that loads lazily. */
+export interface FormMeta {
+  /** Stable id, matches the loaded FormData.form.id, e.g. "yang24". */
+  id: string;
+  style: StyleId;
+  /** Short label distinguishing forms within a family, e.g. "24 · Simplified". */
+  variant: TranslatableNames;
+  /** Posture count, for catalog display. */
+  count: number;
+  /** Lineage / standardization note shown under the form in the switcher. */
+  lineage: Description;
+  /** False until the dataset's content has been verified by a human. */
+  verified: boolean;
+  /** Lazy loader for the full dataset (resolves to its own bundle chunk). */
+  load: () => Promise<FormData>;
+}
