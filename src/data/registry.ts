@@ -67,6 +67,7 @@ export const STYLES: StyleMeta[] = [
 ];
 
 export const FORMS: FormMeta[] = [
+  // ---- Yang family ----
   {
     id: 'yang24',
     style: 'yang',
@@ -80,6 +81,42 @@ export const FORMS: FormMeta[] = [
     load: () => import('./yang24').then((m) => m.formData),
   },
   {
+    id: 'yang40',
+    style: 'yang',
+    variant: { en: '40 · Competition', sv: '40 · Tävling', zh_pinyin: 'Sìshí Shì', zh_hans: '四十式' },
+    count: 40,
+    lineage: {
+      en: 'Standardized 1988 Wushu competition routine.',
+      sv: 'Standardiserad tävlingsrutin från 1988.',
+    },
+    verified: false,
+    load: () => import('./yang40').then((m) => m.formData),
+  },
+  {
+    id: 'yang85',
+    style: 'yang',
+    variant: { en: '85 · Traditional', sv: '85 · Traditionell', zh_pinyin: 'Bāshíwǔ Shì', zh_hans: '八十五式' },
+    count: 85,
+    lineage: {
+      en: 'Yang Chengfu long form, Fu Zhongwen enumeration.',
+      sv: 'Yang Chengfus långa form, Fu Zhongwens uppräkning.',
+    },
+    verified: false,
+    load: () => import('./yang85').then((m) => m.formData),
+  },
+  {
+    id: 'yang103',
+    style: 'yang',
+    variant: { en: '103 · Traditional Long', sv: '103 · Traditionell lång', zh_pinyin: 'Yībǎilíngsān Shì', zh_hans: '一百零三式' },
+    count: 103,
+    lineage: {
+      en: 'Yang Chengfu lineage, Tung Ying-chieh enumeration.',
+      sv: 'Yang Chengfu-linjen, Tung Ying-chiehs uppräkning.',
+    },
+    verified: false,
+    load: () => import('./yang103').then((m) => m.formData),
+  },
+  {
     id: 'yang108',
     style: 'yang',
     variant: { en: '108 · Traditional Long', sv: '108 · Traditionell lång', zh_pinyin: 'Lǎojià', zh_hans: '老架' },
@@ -90,6 +127,119 @@ export const FORMS: FormMeta[] = [
     },
     verified: false,
     load: () => import('./yang108').then((m) => m.formData),
+  },
+  // ---- Chen family ----
+  {
+    id: 'chen18',
+    style: 'chen',
+    variant: { en: '18 · Short Form', sv: '18 · Kort form', zh_pinyin: 'Shíbā Shì', zh_hans: '十八式' },
+    count: 18,
+    lineage: {
+      en: 'Chen Zhenglei’s beginner short form, distilled from Laojia Yilu.',
+      sv: 'Chen Zhengleis nybörjarform, destillerad ur Laojia Yilu.',
+    },
+    verified: false,
+    load: () => import('./chen18').then((m) => m.formData),
+  },
+  {
+    id: 'chen_laojia',
+    style: 'chen',
+    variant: { en: 'Laojia Yilu · Old Frame I', sv: 'Laojia Yilu · Gammal ram I', zh_pinyin: 'Lǎojià Yílù', zh_hans: '老架一路' },
+    count: 74,
+    lineage: {
+      en: 'Chen family foundational long form, from Chenjiagou village.',
+      sv: 'Chen-familjens grundläggande långa form, från byn Chenjiagou.',
+    },
+    verified: false,
+    load: () => import('./chen_laojia').then((m) => m.formData),
+  },
+  {
+    id: 'chen56',
+    style: 'chen',
+    variant: { en: '56 · Competition', sv: '56 · Tävling', zh_pinyin: 'Wǔshíliù Shì', zh_hans: '五十六式' },
+    count: 56,
+    lineage: {
+      en: 'Standardized 1989 Chen competition routine.',
+      sv: 'Standardiserad Chen-tävlingsrutin från 1989.',
+    },
+    verified: false,
+    load: () => import('./chen56').then((m) => m.formData),
+  },
+  // ---- Wu family ----
+  {
+    id: 'wu_long',
+    style: 'wu',
+    variant: { en: '108 · Traditional Slow', sv: '108 · Traditionell långsam', zh_pinyin: 'Yībǎilíngbā Shì', zh_hans: '一百零八式' },
+    count: 108,
+    lineage: {
+      en: 'Wu Jianquan round form, via the Wu Kung-tsao lineage.',
+      sv: 'Wu Jianquans runda form, via Wu Kung-tsao-linjen.',
+    },
+    verified: false,
+    load: () => import('./wu_long').then((m) => m.formData),
+  },
+  // ---- Wu/Hao family ----
+  {
+    id: 'wuhao',
+    style: 'wuhao',
+    variant: { en: '46 · Competition', sv: '46 · Tävling', zh_pinyin: 'Sìshíliù Shì', zh_hans: '四十六式' },
+    count: 46,
+    lineage: {
+      en: 'Hao small frame; Wu Yuxiang → Li Yiyu → Hao Weizhen.',
+      sv: 'Hao liten ram; Wu Yuxiang → Li Yiyu → Hao Weizhen.',
+    },
+    verified: false,
+    load: () => import('./wuhao').then((m) => m.formData),
+  },
+  // ---- Sun family ----
+  {
+    id: 'sun73',
+    style: 'sun',
+    variant: { en: '73 · Competition', sv: '73 · Tävling', zh_pinyin: 'Qīshísān Shì', zh_hans: '七十三式' },
+    count: 73,
+    lineage: {
+      en: 'Standardized Sun competition routine, Sun Lutang lineage.',
+      sv: 'Standardiserad Sun-tävlingsrutin, Sun Lutang-linjen.',
+    },
+    verified: false,
+    load: () => import('./sun73').then((m) => m.formData),
+  },
+  {
+    id: 'sun97',
+    style: 'sun',
+    variant: { en: '97 · Traditional', sv: '97 · Traditionell', zh_pinyin: 'Jiǔshíqī Shì', zh_hans: '九十七式' },
+    count: 97,
+    lineage: {
+      en: 'Sun Lutang form, codified by his daughter Sun Jianyun.',
+      sv: 'Sun Lutangs form, kodifierad av dottern Sun Jianyun.',
+    },
+    verified: false,
+    load: () => import('./sun97').then((m) => m.formData),
+  },
+  // ---- Combined / Competition ----
+  {
+    id: 'comb42',
+    style: 'combined',
+    variant: { en: '42 · Competition', sv: '42 · Tävling', zh_pinyin: 'Sìshí’èr Shì', zh_hans: '四十二式' },
+    count: 42,
+    lineage: {
+      en: '1989 combined competition form (Yang/Chen/Wu/Sun).',
+      sv: 'Kombinerad tävlingsform från 1989 (Yang/Chen/Wu/Sun).',
+    },
+    verified: false,
+    load: () => import('./comb42').then((m) => m.formData),
+  },
+  {
+    id: 'comb48',
+    style: 'combined',
+    variant: { en: '48 · Combined', sv: '48 · Kombinerad', zh_pinyin: 'Sìshíbā Shì', zh_hans: '四十八式' },
+    count: 48,
+    lineage: {
+      en: '1976 combined routine, predominantly Yang-style.',
+      sv: 'Kombinerad rutin från 1976, främst Yang-stil.',
+    },
+    verified: false,
+    load: () => import('./comb48').then((m) => m.formData),
   },
 ];
 

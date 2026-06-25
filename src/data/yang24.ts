@@ -329,7 +329,7 @@ export const formData: FormData = {
       },
       tags: ['stance', 'transition'],
       media: { image: null, audio: null, video: null, rig: null },
-      repeatOf: 16,
+      repeatOf: null,
     },
     {
       seq: 18,

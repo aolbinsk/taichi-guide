@@ -1,0 +1,1627 @@
+import type { FormData } from '../types';
+
+// Sun Style Traditional Form — 97 Postures (孙式太极拳传统套路, Sun Lutang 孙禄堂
+// lineage). This is the enumeration codified by Sun Jianyun (孙剑云, Sun Lutang's
+// daughter) in her 1957/1959 revision of "Sun Style Taijiquan", where the
+// original 98-form's separate Wuji and Taiji openings are merged into a single
+// "Commencing Form". It is by far the most widely circulated and taught Sun
+// traditional routine. Counting follows the classic 拳谱: 起式 and 收式 are each
+// one posture, and every "Open Hands / Close Hands" (开手/合手) is counted at each
+// of its occurrences — Sun style is nicknamed the "open-close active-step form"
+// (开合活步太极拳) for exactly this reason.
+//
+// Sun style blends Xingyiquan's compact follow-step footwork and Baguazhang's
+// turning with Tai Chi softness: high, agile stances, a trailing rear foot that
+// steps up after each advance, and the recurring opening-and-closing of the
+// hands as a breathing/qi gathering between techniques.
+//
+// Media is left null until assets exist; the UI renders stable placeholders.
+// Content (esp. Swedish) still pending human verification — see PLAN.md.
+
+export const formData: FormData = {
+  form: {
+    id: 'sun97',
+    name: {
+      en: 'Sun Style — Traditional 97 Form',
+      sv: 'Sun-stil — traditionell 97-form',
+      zh_pinyin: 'Sūn Shì Tàijíquán',
+      zh_hans: '孙式太极拳',
+    },
+    parts: [
+      {
+        id: 'P1',
+        label: {
+          en: 'Part I: Opening & Foundations',
+          sv: 'Del I: Öppning & grunder',
+          zh_pinyin: 'Dì Yī Duàn',
+          zh_hans: '第一段',
+        },
+        range: [1, 33],
+      },
+      {
+        id: 'P2',
+        label: {
+          en: 'Part II: Kicks & Cloud Hands',
+          sv: 'Del II: Sparkar & molnhänder',
+          zh_pinyin: 'Dì Èr Duàn',
+          zh_hans: '第二段',
+        },
+        range: [34, 66],
+      },
+      {
+        id: 'P3',
+        label: {
+          en: 'Part III: Shuttles & Closing',
+          sv: 'Del III: Skyttlar & avslutning',
+          zh_pinyin: 'Dì Sān Duàn',
+          zh_hans: '第三段',
+        },
+        range: [67, 97],
+      },
+    ],
+  },
+  milestones: [
+    { label: 'Start', seq: 1 },
+    { label: 'Single Whip', seq: 6 },
+    { label: 'Carry Tiger', seq: 22 },
+    { label: 'Cloud Hands', seq: 41 },
+    { label: 'Kicks', seq: 49 },
+    { label: 'Jade Lady', seq: 73 },
+    { label: 'Shoot Tiger', seq: 93 },
+    { label: 'Closing', seq: 97 },
+  ],
+  postures: [
+    {
+      seq: 1,
+      names: {
+        en: 'Commencing Form',
+        sv: 'Inledande form',
+        zh_pinyin: 'Qǐshì',
+        zh_hans: '起势',
+      },
+      description: {
+        en: 'Stand naturally with the feet together and arms hanging, settling the mind and sinking the breath to begin the form. This single posture replaces the older Wuji and Taiji openings of the 98-form.',
+        sv: 'Stå naturligt med fötterna ihop och armarna hängande, lugna sinnet och sänk andetaget för att inleda formen. Denna enda position ersätter de äldre Wuji- och Taiji-öppningarna i 98-formen.',
+      },
+      tags: ['opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 2,
+      names: {
+        en: 'Lazily Tying the Coat',
+        sv: 'Knyt rocken makligt',
+        zh_pinyin: 'Lǎnzhāyī',
+        zh_hans: '懒扎衣',
+      },
+      description: {
+        en: 'Turn and step the right foot forward into a follow-step, both hands rolling and pressing out to the front like the classic Grasp the Sparrow’s Tail. This is the foundational technique that recurs throughout the form.',
+        sv: 'Vänd och kliv fram med höger fot i ett följesteg, båda händerna rullar och pressar ut framåt likt det klassiska Grip sparvens stjärt. Detta är grundtekniken som återkommer genom hela formen.',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 3,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Bring the palms to face each other in front of the chest, then draw them apart to shoulder width as the breath expands. This opening of the hands is the signature gathering motion of Sun style.',
+        sv: 'För handflatorna mot varandra framför bröstet och dra dem sedan isär till axelbredd medan andetaget expanderar. Denna öppning av händerna är Sun-stilens kännetecknande samlande rörelse.',
+      },
+      tags: ['opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 4,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the open palms back together toward the chest as the breath settles, condensing the energy gathered by Open Hands. Open and Close Hands always work as a pair.',
+        sv: 'För de öppna handflatorna åter mot varandra mot bröstet medan andetaget sjunker, och kondensera energin som samlats av öppna händer. Öppna och sluta händer hör alltid ihop som ett par.',
+      },
+      tags: ['opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 5,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward as the weight settles between the feet. Sun style performs Single Whip with open palms rather than a hooked hand.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt medan tyngden sjunker mellan fötterna. Sun-stilen utför enkelt piskslag med öppna handflator istället för en krokad hand.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 6,
+      names: {
+        en: 'Raise Hands and Step Up',
+        sv: 'Lyft händerna och kliv fram',
+        zh_pinyin: 'Tíshǒu Shàngshì',
+        zh_hans: '提手上势',
+      },
+      description: {
+        en: 'Follow-step forward and bring the hands together in front, the forearms lifting to trap and press an opponent’s arm. The rear foot trails up close behind the front in the characteristic Sun footwork.',
+        sv: 'Följestega framåt och för samman händerna framför, underarmarna lyfter för att fånga och pressa motståndarens arm. Bakre foten följer tätt upp bakom den främre i Suns typiska fotarbete.',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 7,
+      names: {
+        en: 'White Crane Spreads Its Wings',
+        sv: 'Vit trana breder ut vingarna',
+        zh_pinyin: 'Báihè Liàngchì',
+        zh_hans: '白鹤亮翅',
+      },
+      description: {
+        en: 'Settle back into a high empty stance, the right hand rising past the temple and the left settling by the hip, opening the arms like a crane spreading its wings.',
+        sv: 'Sjunk tillbaka i en hög tom ställning, höger hand stiger förbi tinningen och vänster sänks vid höften, och armarna öppnas som en trana som breder ut vingarna.',
+      },
+      tags: ['stance', 'opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 8,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Bring the palms to face one another before the chest and draw them apart to shoulder width, gathering and expanding the breath.',
+        sv: 'För handflatorna mot varandra framför bröstet och dra dem isär till axelbredd, samla och expandera andetaget.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 9,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest as the breath settles, condensing the gathered energy.',
+        sv: 'För handflatorna åter samman mot bröstet medan andetaget sjunker, och kondensera den samlade energin.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 10,
+      names: {
+        en: 'Brush Knee and Twist Step',
+        sv: 'Borsta knä och vrid steg',
+        zh_pinyin: 'Lōuxī Àobù',
+        zh_hans: '搂膝拗步',
+      },
+      description: {
+        en: 'Step forward with a follow-step, one hand brushing across the knee to clear a low attack while the other pushes forward at shoulder height.',
+        sv: 'Kliv framåt med ett följesteg, en hand sveper över knäet för att avvärja ett lågt angrepp medan den andra trycker framåt i axelhöjd.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 11,
+      names: {
+        en: 'Strum the Lute',
+        sv: 'Spela luta',
+        zh_pinyin: 'Shǒuhuī Pípá',
+        zh_hans: '手挥琵琶',
+      },
+      description: {
+        en: 'Draw into a high empty stance with the front heel touching down, hands closing in front as if cradling a lute, ready to trap the opponent’s arm.',
+        sv: 'Dra ihop till hög tom ställning med främre hälen i marken, händerna sluts framför som om de håller en luta, redo att fånga motståndarens arm.',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 12,
+      names: {
+        en: 'Advance, Deflect, Parry and Punch',
+        sv: 'Avancera, avled, parera och slå',
+        zh_pinyin: 'Jìnbù Bānlánchuí',
+        zh_hans: '进步搬拦捶',
+      },
+      description: {
+        en: 'Deflect with the forearm, parry with the open hand, then follow-step in and drive the right fist forward in a straight punch.',
+        sv: 'Avled med underarmen, parera med öppen hand, följestega sedan in och driv höger näve framåt i ett rakt slag.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 13,
+      names: {
+        en: 'Apparent Close Up',
+        sv: 'Skenbar stängning',
+        zh_pinyin: 'Rúfēng Sìbì',
+        zh_hans: '如封似闭',
+      },
+      description: {
+        en: 'Cross the forearms to withdraw and neutralize, then settle and press both palms forward — "sealing as if shutting a door."',
+        sv: 'Korsa underarmarna för att dra tillbaka och neutralisera, sjunk sedan och tryck båda handflatorna framåt — "förslut som att stänga en dörr."',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 14,
+      names: {
+        en: 'Embrace Tiger, Return to Mountain',
+        sv: 'Omfamna tigern, återvänd till berget',
+        zh_pinyin: 'Bàohǔ Tuīshān',
+        zh_hans: '抱虎推山',
+      },
+      description: {
+        en: 'Turn the body toward the corner, scooping both arms low as if embracing a tiger, then step in and push forward toward the mountain.',
+        sv: 'Vänd kroppen mot hörnet, skopa båda armarna lågt som att omfamna en tiger, kliv sedan in och tryck framåt mot berget.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 15,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Turn the palms to face each other before the chest and draw them apart to shoulder width, expanding the breath.',
+        sv: 'Vänd handflatorna mot varandra framför bröstet och dra dem isär till axelbredd, expandera andetaget.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 16,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the gathered energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera den samlade energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 17,
+      names: {
+        en: 'Brush Knee and Twist Step',
+        sv: 'Borsta knä och vrid steg',
+        zh_pinyin: 'Lōuxī Àobù',
+        zh_hans: '搂膝拗步',
+      },
+      description: {
+        en: 'Follow-step forward, brushing one hand across the knee to clear a low attack while the other palm pushes forward.',
+        sv: 'Följestega framåt och svep en hand över knäet för att avvärja ett lågt angrepp medan den andra handflatan trycker framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 10,
+    },
+    {
+      seq: 18,
+      names: {
+        en: 'Strum the Lute',
+        sv: 'Spela luta',
+        zh_pinyin: 'Shǒuhuī Pípá',
+        zh_hans: '手挥琵琶',
+      },
+      description: {
+        en: 'Settle into a high empty stance with the front heel down, the hands closing in front to cradle and trap as if strumming a lute.',
+        sv: 'Sjunk i hög tom ställning med främre hälen i marken, händerna sluts framför för att hålla och fånga som om man spelar luta.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 11,
+    },
+    {
+      seq: 19,
+      names: {
+        en: 'Lazily Tying the Coat',
+        sv: 'Knyt rocken makligt',
+        zh_pinyin: 'Lǎnzhāyī',
+        zh_hans: '懒扎衣',
+      },
+      description: {
+        en: 'Follow-step forward, both hands rolling and pressing out to the front in the foundational ward-and-press of Sun style.',
+        sv: 'Följestega framåt, båda händerna rullar och pressar ut framåt i Sun-stilens grundläggande avvärj-och-press.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 2,
+    },
+    {
+      seq: 20,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 21,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 22,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 23,
+      names: {
+        en: 'Wave Hands Like Clouds (Right)',
+        sv: 'Vinka händerna som moln (höger)',
+        zh_pinyin: 'Yúnshǒu (Yòu)',
+        zh_hans: '云手（右）',
+      },
+      description: {
+        en: 'Step sideways to the right, the hands tracing continuous overlapping circles in front of the body as the weight shifts from foot to foot with a closing follow-step.',
+        sv: 'Kliv i sidled åt höger, händerna ritar kontinuerliga överlappande cirklar framför kroppen medan tyngden skiftar från fot till fot med ett avslutande följesteg.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 24,
+      names: {
+        en: 'Wave Hands Like Clouds (Left)',
+        sv: 'Vinka händerna som moln (vänster)',
+        zh_pinyin: 'Yúnshǒu (Zuǒ)',
+        zh_hans: '云手（左）',
+      },
+      description: {
+        en: 'Continue the cloud-hands traveling sideways to the left, the palms circling in front of the chest while the feet step and follow.',
+        sv: 'Fortsätt molnhänderna i sidled åt vänster, handflatorna cirklar framför bröstet medan fötterna kliver och följer.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 25,
+      names: {
+        en: 'High Pat on Horse',
+        sv: 'Klappa hästen högt',
+        zh_pinyin: 'Gāo Tàn Mǎ',
+        zh_hans: '高探马',
+      },
+      description: {
+        en: 'Draw into a high empty stance, the upper palm reaching forward over the upturned lower hand at face height, as if patting a tall horse.',
+        sv: 'Dra ihop till hög tom ställning, den övre handflatan sträcks framåt över den nedre uppåtvända handen i ansiktshöjd, som att klappa en hög häst.',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 26,
+      names: {
+        en: 'Right Separation Kick',
+        sv: 'Höger delande spark',
+        zh_pinyin: 'Yòu Qǐjiǎo',
+        zh_hans: '右起脚',
+      },
+      description: {
+        en: 'Cross and open the hands, then lift and kick out with the right instep toward the front-right corner, the arms extending to balance.',
+        sv: 'Korsa och öppna händerna, lyft sedan och sparka ut med höger vrist mot främre högra hörnet, armarna sträcks ut för balans.',
+      },
+      tags: ['kick', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 27,
+      names: {
+        en: 'Left Separation Kick',
+        sv: 'Vänster delande spark',
+        zh_pinyin: 'Zuǒ Qǐjiǎo',
+        zh_hans: '左起脚',
+      },
+      description: {
+        en: 'Set down and mirror the technique, lifting and kicking out with the left instep toward the front-left corner.',
+        sv: 'Sätt ned och spegla tekniken, lyft och sparka ut med vänster vrist mot främre vänstra hörnet.',
+      },
+      tags: ['kick', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 28,
+      names: {
+        en: 'Turn Body and Kick',
+        sv: 'Vänd kroppen och sparka',
+        zh_pinyin: 'Zhuǎnshēn Dēngjiǎo',
+        zh_hans: '转身蹬脚',
+      },
+      description: {
+        en: 'Spin on the supporting foot, cross the hands, and deliver a heel kick to the rear direction as the body comes around.',
+        sv: 'Snurra på stödfoten, korsa händerna och utför en hälspark bakåt medan kroppen vänder runt.',
+      },
+      tags: ['kick', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 29,
+      names: {
+        en: 'Brush Knee and Twist Step',
+        sv: 'Borsta knä och vrid steg',
+        zh_pinyin: 'Lōuxī Àobù',
+        zh_hans: '搂膝拗步',
+      },
+      description: {
+        en: 'Land forward into a follow-step, brushing one hand across the knee while the other palm pushes forward.',
+        sv: 'Landa framåt i ett följesteg och svep en hand över knäet medan den andra handflatan trycker framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 10,
+    },
+    {
+      seq: 30,
+      names: {
+        en: 'Step Up, Plant the Punch',
+        sv: 'Kliv fram, plantera slaget',
+        zh_pinyin: 'Jìnbù Zāichuí',
+        zh_hans: '进步栽捶',
+      },
+      description: {
+        en: 'Follow-step forward and drive the right fist downward into a low planting punch toward the opponent’s knee or thigh.',
+        sv: 'Följestega framåt och driv höger näve nedåt i ett lågt planterande slag mot motståndarens knä eller lår.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 31,
+      names: {
+        en: 'Turn Over Body and Strike',
+        sv: 'Vänd över kroppen och slå',
+        zh_pinyin: 'Fānshēn Èrqǐ',
+        zh_hans: '翻身二起',
+      },
+      description: {
+        en: 'Turn the body over to the rear, lifting the knee and swinging a fist up and over in a rising double-lift attack.',
+        sv: 'Vänd kroppen bakåt, lyft knäet och svinga en näve upp och över i en stigande dubbellyftsattack.',
+      },
+      tags: ['strike', 'kick', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 32,
+      names: {
+        en: 'Cover Body, Subdue the Tiger (Left)',
+        sv: 'Täck kroppen, kuva tigern (vänster)',
+        zh_pinyin: 'Zuǒ Pīshēn Fúhǔ',
+        zh_hans: '左披身伏虎',
+      },
+      description: {
+        en: 'Step across and settle low, both fists arcing to cover the body on the left side as if pressing down a crouching tiger.',
+        sv: 'Kliv över och sjunk lågt, båda nävarna bågar för att täcka kroppen på vänster sida som att trycka ned en hukande tiger.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 33,
+      names: {
+        en: 'Cover Body, Subdue the Tiger (Right)',
+        sv: 'Täck kroppen, kuva tigern (höger)',
+        zh_pinyin: 'Yòu Pīshēn Fúhǔ',
+        zh_hans: '右披身伏虎',
+      },
+      description: {
+        en: 'Mirror the previous move to the right, the fists arcing to cover the body and subdue the tiger on the right side.',
+        sv: 'Spegla föregående rörelse åt höger, nävarna bågar för att täcka kroppen och kuva tigern på höger sida.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 32,
+    },
+    {
+      seq: 34,
+      names: {
+        en: 'Turn Body and Kick',
+        sv: 'Vänd kroppen och sparka',
+        zh_pinyin: 'Zhuǎnshēn Dēngjiǎo',
+        zh_hans: '转身蹬脚',
+      },
+      description: {
+        en: 'Turn the body, cross and open the hands, and deliver a heel kick out to the front as the form changes direction.',
+        sv: 'Vänd kroppen, korsa och öppna händerna och utför en hälspark framåt medan formen byter riktning.',
+      },
+      tags: ['kick', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 28,
+    },
+    {
+      seq: 35,
+      names: {
+        en: 'Strike Opponent’s Ears with Both Fists',
+        sv: 'Slå motståndarens öron med båda nävarna',
+        zh_pinyin: 'Shuāngfēng Guàn’ěr',
+        zh_hans: '双峰贯耳',
+      },
+      description: {
+        en: 'Follow-step into a high stance, both fists swinging up and inward in wide arcs toward the opponent’s ears, like two peaks closing together.',
+        sv: 'Följestega in i en hög ställning, båda nävarna svingar upp och inåt i vida bågar mot motståndarens öron, som två toppar som möts.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 36,
+      names: {
+        en: 'Turn Body and Kick',
+        sv: 'Vänd kroppen och sparka',
+        zh_pinyin: 'Zhuǎnshēn Dēngjiǎo',
+        zh_hans: '转身蹬脚',
+      },
+      description: {
+        en: 'Spin around, cross and open the hands, and deliver another heel kick to the new direction.',
+        sv: 'Snurra runt, korsa och öppna händerna och utför ännu en hälspark i den nya riktningen.',
+      },
+      tags: ['kick', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 28,
+    },
+    {
+      seq: 37,
+      names: {
+        en: 'Advance, Deflect, Parry and Punch',
+        sv: 'Avancera, avled, parera och slå',
+        zh_pinyin: 'Jìnbù Bānlánchuí',
+        zh_hans: '进步搬拦捶',
+      },
+      description: {
+        en: 'Deflect with the forearm, parry with the open hand, then follow-step in and drive the right fist forward.',
+        sv: 'Avled med underarmen, parera med öppen hand, följestega sedan in och driv höger näve framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 12,
+    },
+    {
+      seq: 38,
+      names: {
+        en: 'Apparent Close Up',
+        sv: 'Skenbar stängning',
+        zh_pinyin: 'Rúfēng Sìbì',
+        zh_hans: '如封似闭',
+      },
+      description: {
+        en: 'Cross the forearms to withdraw and neutralize, then settle and press both palms forward to seal the door.',
+        sv: 'Korsa underarmarna för att dra tillbaka och neutralisera, sjunk sedan och tryck båda handflatorna framåt för att försegla dörren.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 13,
+    },
+    {
+      seq: 39,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 40,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 41,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 42,
+      names: {
+        en: 'Wave Hands Like Clouds (Right)',
+        sv: 'Vinka händerna som moln (höger)',
+        zh_pinyin: 'Yúnshǒu (Yòu)',
+        zh_hans: '云手（右）',
+      },
+      description: {
+        en: 'Travel sideways to the right, the palms tracing continuous overlapping circles as the feet step and follow.',
+        sv: 'Förflytta dig i sidled åt höger, handflatorna ritar kontinuerliga överlappande cirklar medan fötterna kliver och följer.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 23,
+    },
+    {
+      seq: 43,
+      names: {
+        en: 'Wave Hands Like Clouds (Left)',
+        sv: 'Vinka händerna som moln (vänster)',
+        zh_pinyin: 'Yúnshǒu (Zuǒ)',
+        zh_hans: '云手（左）',
+      },
+      description: {
+        en: 'Continue the cloud-hands traveling sideways to the left, the palms circling in front of the chest.',
+        sv: 'Fortsätt molnhänderna i sidled åt vänster, handflatorna cirklar framför bröstet.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 24,
+    },
+    {
+      seq: 44,
+      names: {
+        en: 'Wave Hands Like Clouds, Lower Posture',
+        sv: 'Vinka händerna som moln, låg ställning',
+        zh_pinyin: 'Yúnshǒu Xiàshì',
+        zh_hans: '云手下势',
+      },
+      description: {
+        en: 'Sink low while continuing the cloud-hands, one hand threading downward along the leg to prepare the crouching transition.',
+        sv: 'Sjunk lågt medan molnhänderna fortsätter, en hand förs nedåt längs benet för att förbereda den hukande övergången.',
+      },
+      tags: ['cloud-hands', 'stance', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 45,
+      names: {
+        en: 'Golden Rooster Stands on One Leg (Left)',
+        sv: 'Gyllene tupp står på ett ben (vänster)',
+        zh_pinyin: 'Zuǒ Jīnjī Dúlì',
+        zh_hans: '左金鸡独立',
+      },
+      description: {
+        en: 'Rise from the low posture to balance on the left leg, lifting the right knee and right hand together.',
+        sv: 'Res dig från den låga ställningen och balansera på vänster ben, lyft höger knä och höger hand tillsammans.',
+      },
+      tags: ['stance', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 46,
+      names: {
+        en: 'Golden Rooster Stands on One Leg (Right)',
+        sv: 'Gyllene tupp står på ett ben (höger)',
+        zh_pinyin: 'Yòu Jīnjī Dúlì',
+        zh_hans: '右金鸡独立',
+      },
+      description: {
+        en: 'Set down and mirror, balancing on the right leg while lifting the left knee and left hand.',
+        sv: 'Sätt ned och spegla, balansera på höger ben medan vänster knä och vänster hand lyfts.',
+      },
+      tags: ['stance', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 45,
+    },
+    {
+      seq: 47,
+      names: {
+        en: 'Repulse the Monkey (Left)',
+        sv: 'Driv tillbaka apan (vänster)',
+        zh_pinyin: 'Zuǒ Dào Niǎnhóu',
+        zh_hans: '左倒撵猴',
+      },
+      description: {
+        en: 'Step backward with a withdrawing follow-step, drawing one hand to the hip while the other pushes forward at face height.',
+        sv: 'Kliv bakåt med ett tillbakadragande följesteg, dra en hand till höften medan den andra trycker framåt i ansiktshöjd.',
+      },
+      tags: ['hand-deflection', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 48,
+      names: {
+        en: 'Repulse the Monkey (Right)',
+        sv: 'Driv tillbaka apan (höger)',
+        zh_pinyin: 'Yòu Dào Niǎnhóu',
+        zh_hans: '右倒撵猴',
+      },
+      description: {
+        en: 'Continue retreating, mirroring the coil to the other side as the opposite hand pushes forward.',
+        sv: 'Fortsätt reträtten och spegla spiralen åt andra sidan medan den motsatta handen trycker framåt.',
+      },
+      tags: ['hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 47,
+    },
+    {
+      seq: 49,
+      names: {
+        en: 'Strum the Lute',
+        sv: 'Spela luta',
+        zh_pinyin: 'Shǒuhuī Pípá',
+        zh_hans: '手挥琵琶',
+      },
+      description: {
+        en: 'Settle into a high empty stance, the hands closing in front to cradle and trap as if strumming a lute.',
+        sv: 'Sjunk i hög tom ställning, händerna sluts framför för att hålla och fånga som om man spelar luta.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 11,
+    },
+    {
+      seq: 50,
+      names: {
+        en: 'White Crane Spreads Its Wings',
+        sv: 'Vit trana breder ut vingarna',
+        zh_pinyin: 'Báihè Liàngchì',
+        zh_hans: '白鹤亮翅',
+      },
+      description: {
+        en: 'Settle back into a high empty stance, the upper hand rising past the temple and the lower settling by the hip, opening like a crane’s wings.',
+        sv: 'Sjunk tillbaka i hög tom ställning, den övre handen stiger förbi tinningen och den nedre sänks vid höften, och öppnas som en tranas vingar.',
+      },
+      tags: ['stance', 'opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 7,
+    },
+    {
+      seq: 51,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 52,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 53,
+      names: {
+        en: 'Brush Knee and Twist Step',
+        sv: 'Borsta knä och vrid steg',
+        zh_pinyin: 'Lōuxī Àobù',
+        zh_hans: '搂膝拗步',
+      },
+      description: {
+        en: 'Follow-step forward, brushing one hand across the knee while the other palm pushes forward.',
+        sv: 'Följestega framåt och svep en hand över knäet medan den andra handflatan trycker framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 10,
+    },
+    {
+      seq: 54,
+      names: {
+        en: 'Strum the Lute',
+        sv: 'Spela luta',
+        zh_pinyin: 'Shǒuhuī Pípá',
+        zh_hans: '手挥琵琶',
+      },
+      description: {
+        en: 'Settle into a high empty stance, the hands closing in front to cradle and trap as if strumming a lute.',
+        sv: 'Sjunk i hög tom ställning, händerna sluts framför för att hålla och fånga som om man spelar luta.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 11,
+    },
+    {
+      seq: 55,
+      names: {
+        en: 'Three Penetrations Through the Back',
+        sv: 'Tre genomträngningar genom ryggen',
+        zh_pinyin: 'Sān Tōng Bèi',
+        zh_hans: '三通背',
+      },
+      description: {
+        en: 'A linked sequence opening the arms and connecting power through the back three times, each time spreading like a fan and pushing forward.',
+        sv: 'En sammanlänkad sekvens som öppnar armarna och förbinder kraften genom ryggen tre gånger, varje gång utbredd som en solfjäder och tryckande framåt.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 56,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 57,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 58,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 59,
+      names: {
+        en: 'Wave Hands Like Clouds (Right)',
+        sv: 'Vinka händerna som moln (höger)',
+        zh_pinyin: 'Yúnshǒu (Yòu)',
+        zh_hans: '云手（右）',
+      },
+      description: {
+        en: 'Travel sideways to the right, the palms tracing continuous overlapping circles as the feet step and follow.',
+        sv: 'Förflytta dig i sidled åt höger, handflatorna ritar kontinuerliga överlappande cirklar medan fötterna kliver och följer.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 23,
+    },
+    {
+      seq: 60,
+      names: {
+        en: 'Wave Hands Like Clouds (Left)',
+        sv: 'Vinka händerna som moln (vänster)',
+        zh_pinyin: 'Yúnshǒu (Zuǒ)',
+        zh_hans: '云手（左）',
+      },
+      description: {
+        en: 'Continue the cloud-hands traveling sideways to the left, the palms circling in front of the chest.',
+        sv: 'Fortsätt molnhänderna i sidled åt vänster, handflatorna cirklar framför bröstet.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 24,
+    },
+    {
+      seq: 61,
+      names: {
+        en: 'High Pat on Horse',
+        sv: 'Klappa hästen högt',
+        zh_pinyin: 'Gāo Tàn Mǎ',
+        zh_hans: '高探马',
+      },
+      description: {
+        en: 'Draw into a high empty stance, the upper palm reaching forward over the upturned lower hand at face height, as if patting a tall horse.',
+        sv: 'Dra ihop till hög tom ställning, den övre handflatan sträcks framåt över den nedre uppåtvända handen i ansiktshöjd, som att klappa en hög häst.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 25,
+    },
+    {
+      seq: 62,
+      names: {
+        en: 'Cross Wave of Lotus Leg',
+        sv: 'Korsande lotusspark',
+        zh_pinyin: 'Shízì Bǎilián',
+        zh_hans: '十字摆莲',
+      },
+      description: {
+        en: 'Cross the hands, then sweep the leg in a crescent across the body, the palms slapping the instep as it passes.',
+        sv: 'Korsa händerna och svep sedan benet i en halvmåne tvärs över kroppen, handflatorna slår vristen när den passerar.',
+      },
+      tags: ['kick', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 63,
+      names: {
+        en: 'Advance, Step Up and Punch the Groin',
+        sv: 'Avancera, kliv fram och slå mot ljumsken',
+        zh_pinyin: 'Jìnbù Zhǐdāngchuí',
+        zh_hans: '进步指裆捶',
+      },
+      description: {
+        en: 'Follow-step forward and drive the right fist downward and forward toward the opponent’s lower middle.',
+        sv: 'Följestega framåt och driv höger näve nedåt och framåt mot motståndarens nedre mitt.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 64,
+      names: {
+        en: 'Retreat, Lazily Tying the Coat',
+        sv: 'Reträtt, knyt rocken makligt',
+        zh_pinyin: 'Tuìbù Lǎnzhāyī',
+        zh_hans: '退步懒扎衣',
+      },
+      description: {
+        en: 'Withdraw the front foot in a retreating step while both hands roll and press out to the front in the ward-and-press of Lazily Tying the Coat.',
+        sv: 'Dra tillbaka främre foten i ett retirerande steg medan båda händerna rullar och pressar ut framåt i avvärj-och-press från Knyt rocken makligt.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 2,
+    },
+    {
+      seq: 65,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 66,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 67,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 68,
+      names: {
+        en: 'Snake Creeps Down',
+        sv: 'Ormen kryper ned',
+        zh_pinyin: 'Xiàshì',
+        zh_hans: '下势',
+      },
+      description: {
+        en: 'Sink low into a crouching stance, threading one hand along the inside of the extended leg toward the toes.',
+        sv: 'Sjunk lågt i en hukande ställning och för en hand längs insidan av det utsträckta benet mot tårna.',
+      },
+      tags: ['stance', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 69,
+      names: {
+        en: 'Step Up to Seven Stars',
+        sv: 'Kliv fram till sju stjärnor',
+        zh_pinyin: 'Shàngbù Qīxīng',
+        zh_hans: '上步七星',
+      },
+      description: {
+        en: 'Rise and follow-step forward into a high empty stance, crossing both fists in front of the body in the seven-stars guard.',
+        sv: 'Res dig och följestega framåt till en hög tom ställning, korsa båda nävarna framför kroppen i sjustjärnegarden.',
+      },
+      tags: ['hand-deflection', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 70,
+      names: {
+        en: 'Step Back and Ride the Tiger',
+        sv: 'Kliv tillbaka och rid på tigern',
+        zh_pinyin: 'Tuìbù Kuàhǔ',
+        zh_hans: '退步跨虎',
+      },
+      description: {
+        en: 'Step back into a high empty stance, the hands separating up and down to open the body as if mounting a tiger.',
+        sv: 'Kliv bakåt till en hög tom ställning, händerna separeras upp och ned för att öppna kroppen som att bestiga en tiger.',
+      },
+      tags: ['stance', 'opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 71,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 72,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 73,
+      names: {
+        en: 'Jade Lady Works the Shuttles (Part 1)',
+        sv: 'Jadekvinnan sköter skyttlarna (del 1)',
+        zh_pinyin: 'Yùnǚ Chuānsuō (Yī)',
+        zh_hans: '玉女穿梭（一）',
+      },
+      description: {
+        en: 'Turn to the first corner, one hand lifting to ward off overhead while the other pushes forward, like a weaver passing the shuttle.',
+        sv: 'Vänd mot första hörnet, en hand lyfts för att avvärja ovanför medan den andra trycker framåt, likt en vävare som för skytteln.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 74,
+      names: {
+        en: 'Jade Lady Works the Shuttles (Part 2)',
+        sv: 'Jadekvinnan sköter skyttlarna (del 2)',
+        zh_pinyin: 'Yùnǚ Chuānsuō (Èr)',
+        zh_hans: '玉女穿梭（二）',
+      },
+      description: {
+        en: 'Turn to the second corner and repeat the lifting ward-off and forward push to the new diagonal.',
+        sv: 'Vänd mot andra hörnet och upprepa den lyftande avvärjningen och trycket framåt mot den nya diagonalen.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 73,
+    },
+    {
+      seq: 75,
+      names: {
+        en: 'Jade Lady Works the Shuttles (Part 3)',
+        sv: 'Jadekvinnan sköter skyttlarna (del 3)',
+        zh_pinyin: 'Yùnǚ Chuānsuō (Sān)',
+        zh_hans: '玉女穿梭（三）',
+      },
+      description: {
+        en: 'Turn to the third corner, again lifting one hand overhead while the other pushes forward.',
+        sv: 'Vänd mot tredje hörnet och lyft åter en hand ovanför medan den andra trycker framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 73,
+    },
+    {
+      seq: 76,
+      names: {
+        en: 'Jade Lady Works the Shuttles (Part 4)',
+        sv: 'Jadekvinnan sköter skyttlarna (del 4)',
+        zh_pinyin: 'Yùnǚ Chuānsuō (Sì)',
+        zh_hans: '玉女穿梭（四）',
+      },
+      description: {
+        en: 'Turn to the final corner to complete the four shuttles, the last lifting ward-off and forward push.',
+        sv: 'Vänd mot sista hörnet för att fullborda de fyra skyttlarna, den sista lyftande avvärjningen och trycket framåt.',
+      },
+      tags: ['hand-deflection', 'strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 73,
+    },
+    {
+      seq: 77,
+      names: {
+        en: 'Lazily Tying the Coat',
+        sv: 'Knyt rocken makligt',
+        zh_pinyin: 'Lǎnzhāyī',
+        zh_hans: '懒扎衣',
+      },
+      description: {
+        en: 'Follow-step forward, both hands rolling and pressing out to the front in the foundational ward-and-press.',
+        sv: 'Följestega framåt, båda händerna rullar och pressar ut framåt i den grundläggande avvärj-och-press.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 2,
+    },
+    {
+      seq: 78,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 79,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 80,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 81,
+      names: {
+        en: 'Wave Hands Like Clouds (Right)',
+        sv: 'Vinka händerna som moln (höger)',
+        zh_pinyin: 'Yúnshǒu (Yòu)',
+        zh_hans: '云手（右）',
+      },
+      description: {
+        en: 'Travel sideways to the right, the palms tracing continuous overlapping circles as the feet step and follow.',
+        sv: 'Förflytta dig i sidled åt höger, handflatorna ritar kontinuerliga överlappande cirklar medan fötterna kliver och följer.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 23,
+    },
+    {
+      seq: 82,
+      names: {
+        en: 'Wave Hands Like Clouds (Left)',
+        sv: 'Vinka händerna som moln (vänster)',
+        zh_pinyin: 'Yúnshǒu (Zuǒ)',
+        zh_hans: '云手（左）',
+      },
+      description: {
+        en: 'Continue the cloud-hands traveling sideways to the left, the palms circling in front of the chest.',
+        sv: 'Fortsätt molnhänderna i sidled åt vänster, handflatorna cirklar framför bröstet.',
+      },
+      tags: ['cloud-hands', 'hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 24,
+    },
+    {
+      seq: 83,
+      names: {
+        en: 'Wave Hands Like Clouds, Lower Posture',
+        sv: 'Vinka händerna som moln, låg ställning',
+        zh_pinyin: 'Yúnshǒu Xiàshì',
+        zh_hans: '云手下势',
+      },
+      description: {
+        en: 'Sink low while continuing the cloud-hands, one hand threading downward along the leg to prepare the crouching transition.',
+        sv: 'Sjunk lågt medan molnhänderna fortsätter, en hand förs nedåt längs benet för att förbereda den hukande övergången.',
+      },
+      tags: ['cloud-hands', 'stance', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 44,
+    },
+    {
+      seq: 84,
+      names: {
+        en: 'Golden Rooster Stands on One Leg (Left)',
+        sv: 'Gyllene tupp står på ett ben (vänster)',
+        zh_pinyin: 'Zuǒ Jīnjī Dúlì',
+        zh_hans: '左金鸡独立',
+      },
+      description: {
+        en: 'Rise from the low posture to balance on the left leg, lifting the right knee and right hand together.',
+        sv: 'Res dig från den låga ställningen och balansera på vänster ben, lyft höger knä och höger hand tillsammans.',
+      },
+      tags: ['stance', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 45,
+    },
+    {
+      seq: 85,
+      names: {
+        en: 'Golden Rooster Stands on One Leg (Right)',
+        sv: 'Gyllene tupp står på ett ben (höger)',
+        zh_pinyin: 'Yòu Jīnjī Dúlì',
+        zh_hans: '右金鸡独立',
+      },
+      description: {
+        en: 'Set down and mirror, balancing on the right leg while lifting the left knee and left hand.',
+        sv: 'Sätt ned och spegla, balansera på höger ben medan vänster knä och vänster hand lyfts.',
+      },
+      tags: ['stance', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 45,
+    },
+    {
+      seq: 86,
+      names: {
+        en: 'Repulse the Monkey (Left)',
+        sv: 'Driv tillbaka apan (vänster)',
+        zh_pinyin: 'Zuǒ Dào Niǎnhóu',
+        zh_hans: '左倒撵猴',
+      },
+      description: {
+        en: 'Step backward with a withdrawing follow-step, drawing one hand to the hip while the other pushes forward at face height.',
+        sv: 'Kliv bakåt med ett tillbakadragande följesteg, dra en hand till höften medan den andra trycker framåt i ansiktshöjd.',
+      },
+      tags: ['hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 47,
+    },
+    {
+      seq: 87,
+      names: {
+        en: 'Repulse the Monkey (Right)',
+        sv: 'Driv tillbaka apan (höger)',
+        zh_pinyin: 'Yòu Dào Niǎnhóu',
+        zh_hans: '右倒撵猴',
+      },
+      description: {
+        en: 'Continue retreating, mirroring the coil to the other side as the opposite hand pushes forward.',
+        sv: 'Fortsätt reträtten och spegla spiralen åt andra sidan medan den motsatta handen trycker framåt.',
+      },
+      tags: ['hand-deflection', 'transition', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 47,
+    },
+    {
+      seq: 88,
+      names: {
+        en: 'Strum the Lute',
+        sv: 'Spela luta',
+        zh_pinyin: 'Shǒuhuī Pípá',
+        zh_hans: '手挥琵琶',
+      },
+      description: {
+        en: 'Settle into a high empty stance, the hands closing in front to cradle and trap as if strumming a lute.',
+        sv: 'Sjunk i hög tom ställning, händerna sluts framför för att hålla och fånga som om man spelar luta.',
+      },
+      tags: ['hand-deflection', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 11,
+    },
+    {
+      seq: 89,
+      names: {
+        en: 'White Crane Spreads Its Wings',
+        sv: 'Vit trana breder ut vingarna',
+        zh_pinyin: 'Báihè Liàngchì',
+        zh_hans: '白鹤亮翅',
+      },
+      description: {
+        en: 'Settle back into a high empty stance, the upper hand rising past the temple and the lower settling by the hip, opening like a crane’s wings.',
+        sv: 'Sjunk tillbaka i hög tom ställning, den övre handen stiger förbi tinningen och den nedre sänks vid höften, och öppnas som en tranas vingar.',
+      },
+      tags: ['stance', 'opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 7,
+    },
+    {
+      seq: 90,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'Palms face one another before the chest, then draw apart to shoulder width as the breath expands.',
+        sv: 'Handflatorna vänds mot varandra framför bröstet och dras sedan isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 91,
+      names: {
+        en: 'Close Hands',
+        sv: 'Slut händer',
+        zh_pinyin: 'Héshǒu',
+        zh_hans: '合手',
+      },
+      description: {
+        en: 'Draw the palms back together toward the chest, condensing the energy as the breath settles.',
+        sv: 'För handflatorna åter samman mot bröstet och kondensera energin medan andetaget sjunker.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 4,
+    },
+    {
+      seq: 92,
+      names: {
+        en: 'Single Whip',
+        sv: 'Enkelt piskslag',
+        zh_pinyin: 'Dānbiān',
+        zh_hans: '单鞭',
+      },
+      description: {
+        en: 'Open both arms wide to the sides with the palms turning outward, settling the weight between the feet.',
+        sv: 'Öppna båda armarna brett ut åt sidorna med handflatorna vända utåt och sänk tyngden mellan fötterna.',
+      },
+      tags: ['strike', 'stance', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 5,
+    },
+    {
+      seq: 93,
+      names: {
+        en: 'Bend the Bow and Shoot the Tiger',
+        sv: 'Spänn bågen och skjut tigern',
+        zh_pinyin: 'Wāngōng Shèhǔ',
+        zh_hans: '弯弓射虎',
+      },
+      description: {
+        en: 'Turn the body and draw both fists back and up as if drawing a bow, then release them forward toward the imagined tiger.',
+        sv: 'Vänd kroppen och dra båda nävarna bakåt och uppåt som att spänna en båge, släpp dem sedan framåt mot den föreställda tigern.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 94,
+      names: {
+        en: 'Double Crashing Fists',
+        sv: 'Dubbla krockande nävar',
+        zh_pinyin: 'Shuāng Zhuàngchuí',
+        zh_hans: '双撞捶',
+      },
+      description: {
+        en: 'Follow-step forward and drive both fists together in a converging strike to the opponent’s middle.',
+        sv: 'Följestega framåt och driv båda nävarna samman i ett konvergerande slag mot motståndarens mitt.',
+      },
+      tags: ['strike', 'stance'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 95,
+      names: {
+        en: 'Yin and Yang Combine as One',
+        sv: 'Yin och yang förenas till ett',
+        zh_pinyin: 'Yīnyáng Hùnyī',
+        zh_hans: '阴阳混一',
+      },
+      description: {
+        en: 'Turn back to the front and bring the hands together before the body, blending the opened energies into a single balanced whole.',
+        sv: 'Vänd tillbaka framåt och för samman händerna framför kroppen, och förena de öppnade energierna till en enda balanserad helhet.',
+      },
+      tags: ['opening-closing', 'transition'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+    {
+      seq: 96,
+      names: {
+        en: 'Open Hands',
+        sv: 'Öppna händer',
+        zh_pinyin: 'Kāishǒu',
+        zh_hans: '开手',
+      },
+      description: {
+        en: 'A final pairing of the signature gathering: the palms face one another before the chest and draw apart to shoulder width as the breath expands.',
+        sv: 'En sista parning av den kännetecknande samlingen: handflatorna vänds mot varandra framför bröstet och dras isär till axelbredd medan andetaget expanderar.',
+      },
+      tags: ['opening-closing', 'repetitive'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: 3,
+    },
+    {
+      seq: 97,
+      names: {
+        en: 'Closing Form',
+        sv: 'Avslutande form',
+        zh_pinyin: 'Shōushì',
+        zh_hans: '收势',
+      },
+      description: {
+        en: 'Close the hands a final time, lower the palms to the sides, and draw the feet together to return to a calm standing posture, completing the form. This replaces the older "Return to Wuji" closing of the 98-form.',
+        sv: 'Slut händerna en sista gång, sänk handflatorna längs sidorna och för samman fötterna för att återgå till en lugn stående position och avsluta formen. Detta ersätter den äldre "Återgång till Wuji"-avslutningen i 98-formen.',
+      },
+      tags: ['opening-closing'],
+      media: { image: null, audio: null, video: null, rig: null },
+      repeatOf: null,
+    },
+  ],
+};

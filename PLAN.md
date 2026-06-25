@@ -18,15 +18,34 @@ we locked while iterating on the spec, the data model, and the phased build.
 ```
 index.html ─ vite ─ src/
   types.ts            ← the data contract (all languages are equal keys)
-  data/yang108.ts     ← seed FormData (form + parts + milestones + 108 postures)
-  state/useStore.ts   ← Zustand: lang, query, activeTags, expanded, scrollTarget
+  data/
+    registry.ts       ← form catalog (families + lazy loaders), loaded eagerly
+    <id>.ts           ← one FormData per form, code-split (loaded on demand)
+  state/useStore.ts   ← Zustand: lang, formId, query, activeTags, expanded, scroll
   lib/search.ts       ← diacritic-folding fuzzy match (å/ä/ö + pinyin tones)
   i18n/labels.ts      ← UI chrome + tag labels (en/sv)
   components/
-    SearchBar · LanguageToggle · TagFilter
+    FormSwitcher · SearchBar · LanguageToggle · TagFilter
     PostureList · PostureCard · Scrubber
   styles/app.css
 ```
+
+### Form library (14 forms across 5 families + combined)
+The catalog (`registry.ts`) is tiny and eager so the switcher renders instantly;
+each form's posture data is a **separate bundle chunk** fetched only when picked.
+
+| Family | Forms |
+|---|---|
+| **Yang** | 24 Simplified · 40 Competition · 85 Traditional · 103 Traditional · 108 Traditional |
+| **Chen** | 18 Short · Laojia Yilu (Old Frame I) · 56 Competition |
+| **Wu** | 108 Traditional Slow (round form) |
+| **Wu/Hao** | 46 Competition |
+| **Sun** | 73 Competition · 97 Traditional |
+| **Combined** | 42 Competition · 48 Combined |
+
+Adding a form = drop `data/<id>.ts` (exporting `formData`) + one `FormMeta` entry.
+Every dataset is generated/best-effort and carries `verified: false` (shown as a
+"Draft" badge) until a human signs off on its content.
 
 ### Data model (the Phase-1 foundation)
 - **Languages as equal keys.** `names: { en, sv, zh_pinyin, zh_hans }`. English is
@@ -56,7 +75,7 @@ index.html ─ vite ─ src/
 - [ ] App icons (192/512 PNG) for installability.
 
 ### Phase 2 — Structural expansion
-- [ ] Multiple forms (Yang 24/42, Chen 56) behind a form switcher — model is already multi-form.
+- [x] Multiple forms (14, all families) behind a family-grouped form switcher.
 - [ ] Bookmarking ("My Focus Postures") via `localStorage`/IndexedDB.
 - [ ] Richer fuzzy ranking (consider Fuse.js only if substring match proves insufficient).
 

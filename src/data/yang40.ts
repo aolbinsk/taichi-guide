@@ -106,7 +106,7 @@ export const formData: FormData = {
       },
       tags: ['hand-deflection', 'strike', 'stance'],
       media: { image: null, audio: null, video: null, rig: null },
-      repeatOf: 2,
+      repeatOf: null,
     },
     {
       seq: 4,
