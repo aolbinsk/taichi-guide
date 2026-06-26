@@ -19,6 +19,7 @@ export const UI = {
       detail: 'Detail',
     },
     fullForm: 'Full form',
+    thisPosture: 'This posture',
     mediaAttribution:
       'Videos link to their original creators on YouTube for private study; rights remain with the respective channels. See RESOURCES.md for full attribution.',
     repeatOf: (seq: number) => `Repeat of #${seq}`,
@@ -46,6 +47,7 @@ export const UI = {
       detail: 'Detalj',
     },
     fullForm: 'Hela formen',
+    thisPosture: 'Denna position',
     mediaAttribution:
       'Videor länkar till sina ursprungliga skapare på YouTube för privat studie; rättigheterna tillhör respektive kanal. Se RESOURCES.md för fullständig källhänvisning.',
     repeatOf: (seq: number) => `Upprepning av #${seq}`,

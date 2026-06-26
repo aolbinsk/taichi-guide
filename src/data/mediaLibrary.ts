@@ -375,17 +375,53 @@ function lookupPostureMedia(hanzi: string): MediaSource[] {
   return [...montage, ...(POSTURE_MEDIA[key] ?? [])];
 }
 
+// Per-posture clip bounds from a single chaptered demo video. Embedded (never
+// downloaded) with ?start=&end= so the player is scoped to that posture's segment.
+// Timestamps are the video author's own chapter markers. Add a form here when a
+// demo video has reliable per-posture chapters (run yt-dlp's %(chapters)j).
+export const SEGMENT_VIDEOS: Record<
+  string,
+  { videoId: string; title: string; author: string; bySeq: Record<number, [number, number]> }
+> = {
+  yang24: {
+    videoId: 'FUpeJ3Bkr9o',
+    title: 'Yang 24 Form — full set, back view with verbal cues',
+    author: 'Jenny Lu Yoga+',
+    bySeq: { 1: [24, 51], 2: [51, 81], 3: [81, 88], 4: [88, 112], 5: [112, 119], 6: [119, 142], 7: [142, 160], 8: [160, 181], 9: [181, 191], 10: [191, 208], 11: [208, 215], 12: [215, 221], 13: [221, 231], 14: [231, 237], 15: [237, 247], 16: [247, 266], 17: [266, 287], 18: [287, 306], 19: [306, 313], 20: [313, 320], 21: [320, 336], 22: [336, 347], 23: [347, 360], 24: [360, 380] },
+  },
+};
+
+/** Bounded "this posture" clip from the form's chaptered demo, or null. */
+function segmentClip(formId: string, seq: number): MediaSource | null {
+  const f = SEGMENT_VIDEOS[formId];
+  const seg = f?.bySeq[seq];
+  if (!f || !seg) return null;
+  return {
+    kind: 'video',
+    url: `https://www.youtube.com/watch?v=${f.videoId}`,
+    title: f.title,
+    author: f.author,
+    source: 'YouTube',
+    license: '© respective channel — embedded clip, linked for private reference',
+    start: seg[0],
+    end: seg[1],
+    note: 'this posture',
+  };
+}
+
 /**
  * Return a fresh FormData with every posture's `sources` and `media.{image,
  * video}` populated from the shared library: posture-specific resources first,
- * then the form's routine videos (tagged `formLevel`). Pure — never mutates the
- * input dataset (datasets are module singletons shared across renders).
+ * then this posture's bounded clip, then the form's routine videos (tagged
+ * `formLevel`). Pure — never mutates the input dataset (module singletons).
  */
 export function attachMedia(formId: string, data: FormData): FormData {
   const formVideos = (FORM_MEDIA[formId] ?? []).map((s) => ({ ...s, formLevel: true }));
   const postures: Posture[] = data.postures.map((p) => {
     const own = lookupPostureMedia(p.names.zh_hans);
-    const sources = [...own, ...formVideos];
+    const clip = segmentClip(formId, p.seq);
+    // Clip before the whole-form videos so it becomes this posture's primary video.
+    const sources = [...own, ...(clip ? [clip] : []), ...formVideos];
     const firstImage = own.find((s) => s.kind === 'image');
     const firstVideo = sources.find((s) => s.kind === 'video');
     return {

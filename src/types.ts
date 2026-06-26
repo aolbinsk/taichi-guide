@@ -63,8 +63,10 @@ export interface MediaSource {
   license?: string | null;
   /** Camera angle / role, for a UI label. */
   view?: MediaView;
-  /** Optional start offset (seconds) for chaptered routine videos. */
+  /** Optional start offset (seconds) — scopes a YouTube embed to a segment. */
   start?: number;
+  /** Optional end offset (seconds) — with `start`, bounds the embed to one posture's clip. */
+  end?: number;
   /** Whether this came from the whole-form routine rather than the posture. */
   formLevel?: boolean;
   note?: string;

@@ -28,6 +28,13 @@ humans). At load time `attachMedia(formId, data)` merges:
    posture, so `左右野马分鬃` reuses `野马分鬃`.
 2. **Whole-form routine videos** — keyed by form id, attached to every posture of
    that form (front / mirror / step-by-step angles).
+3. **Per-posture bounded clips** (`SEGMENT_VIDEOS`) — for forms whose demo video
+   has per-posture chapter markers, each posture gets a "This posture" tile that
+   embeds the video **scoped to that posture's segment** via `?start=&end=`.
+   Nothing is downloaded — it's a normal embed bounded in time, so it's fully
+   legal to publish. Currently wired for **Yang 24** (24/24 postures, timestamps
+   from the video author's own chapters). Add more forms when a demo video has
+   reliable per-posture chapters (`yt-dlp --print "%(chapters)j"`).
 
 The expanded posture card renders these as an attributed gallery (`MediaGallery`):
 video thumbnails play inline on tap; reference pages render as link chips.

@@ -35,6 +35,10 @@ function VideoTile({ src, alt }: { src: MediaSource; alt: string }) {
   const lang = useStore((s) => s.lang);
   const [playing, setPlaying] = useState(false);
   const id = youTubeId(src.url);
+  // When start/end are set, bound the embed to this posture's segment (a "clip"
+  // of the whole-form demo) — a plain bounded embed, nothing is downloaded.
+  const isClip = src.start != null && src.end != null;
+  const span = isClip ? `&start=${Math.floor(src.start!)}&end=${Math.ceil(src.end!)}` : '';
   const caption = [viewLabel(src.view, lang), src.author].filter(Boolean).join(' · ');
 
   return (
@@ -42,7 +46,7 @@ function VideoTile({ src, alt }: { src: MediaSource; alt: string }) {
       {playing && id ? (
         <div className="mg__frame">
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
+            src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0${span}`}
             title={src.title}
             loading="lazy"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -78,11 +82,20 @@ function VideoTile({ src, alt }: { src: MediaSource; alt: string }) {
             />
           )}
           <span className="mg__play" aria-hidden="true">▶</span>
-          {src.view && <span className="mg__badge">{viewLabel(src.view, lang)}</span>}
+          {isClip ? (
+            <span className="mg__badge">{UI[lang].thisPosture}</span>
+          ) : (
+            src.view && <span className="mg__badge">{viewLabel(src.view, lang)}</span>
+          )}
         </button>
       )}
       <figcaption className="mg__cap">
-        <a href={src.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+        <a
+          href={isClip ? `${src.url}${src.url.includes('?') ? '&' : '?'}t=${Math.floor(src.start!)}` : src.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           {caption || src.source}
         </a>
         {src.formLevel && <span className="mg__formtag">{UI[lang].fullForm}</span>}
