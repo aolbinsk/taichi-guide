@@ -110,6 +110,11 @@ export function MediaGallery({ sources, alt }: Props) {
   const images = sources.filter((s) => s.kind === 'image');
   const videos = sources.filter((s) => s.kind === 'video');
   const pages = sources.filter((s) => s.kind === 'page');
+  // Whole-form routine videos are attached to *every* posture, so they look the
+  // same on each card. Keep the posture-specific clips up top and tuck the
+  // identical full-form demos into a labelled, collapsed section.
+  const postureVideos = videos.filter((s) => !s.formLevel);
+  const formVideos = videos.filter((s) => s.formLevel);
 
   if (sources.length === 0) {
     return (
@@ -139,9 +144,9 @@ export function MediaGallery({ sources, alt }: Props) {
         </div>
       )}
 
-      {videos.length > 0 && (
+      {postureVideos.length > 0 && (
         <div className="mg__grid">
-          {videos.map((s) => (
+          {postureVideos.map((s) => (
             <VideoTile key={s.url} src={s} alt={alt} />
           ))}
         </div>
@@ -158,6 +163,19 @@ export function MediaGallery({ sources, alt }: Props) {
             </li>
           ))}
         </ul>
+      )}
+
+      {formVideos.length > 0 && (
+        <details className="mg__fullform">
+          <summary onClick={(e) => e.stopPropagation()}>
+            {UI[lang].fullFormVideos} · {formVideos.length}
+          </summary>
+          <div className="mg__grid">
+            {formVideos.map((s) => (
+              <VideoTile key={s.url} src={s} alt={alt} />
+            ))}
+          </div>
+        </details>
       )}
 
       <p className="mg__attrib">{UI[lang].mediaAttribution}</p>

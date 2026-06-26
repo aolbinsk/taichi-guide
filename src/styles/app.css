@@ -693,6 +693,42 @@ body {
   color: #6a6a6a;
 }
 
+/* Collapsed section for the whole-form routine videos (identical on every card). */
+.mg__fullform {
+  margin-bottom: 10px;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 6px;
+}
+.mg__fullform > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 12px;
+  color: #9a9a9a;
+  user-select: none;
+}
+.mg__fullform > summary::-webkit-details-marker {
+  display: none;
+}
+.mg__fullform > summary::before {
+  content: '▸';
+  font-size: 10px;
+  color: #6a6a6a;
+  transition: transform 0.15s ease;
+}
+.mg__fullform[open] > summary::before {
+  transform: rotate(90deg);
+}
+.mg__fullform > summary:hover {
+  color: #c8c8c8;
+}
+.mg__fullform .mg__grid {
+  margin-top: 8px;
+}
+
 /* ---- Edge scrubber (thin rail) -------------------------------------- */
 .scrubber {
   position: absolute;
