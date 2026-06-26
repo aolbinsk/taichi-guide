@@ -54,10 +54,10 @@ All links are © their respective channels.
 | Yang 24 | Mirror | Amin Wu 吳阿敏 — back-view | https://www.youtube.com/watch?v=e4VIw41R-PU |
 | Yang 24 | Mirror | Full Set Back View with Verbal Cues | https://www.youtube.com/watch?v=FUpeJ3Bkr9o |
 | Yang 24 | Step-by-step | Full Beginner Instruction (Master Pei) | https://www.youtube.com/watch?v=R8NbQecDygQ |
-| Yang 40 | Front | Chen Sitan 陈思坦 — front + back | https://www.youtube.com/watch?v=WqBI7Rm549I |
+| Yang 40 | Front | Amin Wu 吳阿敏 — front-view demonstration | https://www.youtube.com/watch?v=FowwENJg1xU |
 | Yang 40 | Demo | Yi Peng 易鵬 — competition routine | https://www.youtube.com/watch?v=inPP1EF8okk |
 | Yang 40 | Mirror | Back view with spoken count | https://www.youtube.com/watch?v=QMwZfFVVnCI |
-| Yang 40 | Step-by-step | Tutorial Part 1 | https://www.youtube.com/watch?v=Z5mzw_kS9Vk |
+| Yang 40 | Step-by-step | Peter Chen — slow motion with instructions | https://www.youtube.com/watch?v=w67MYzzl8xk |
 | Yang 85 | Front | Amin Wu 吳阿敏 — Traditional Long Form | https://www.youtube.com/watch?v=CpyWUq6eMyI |
 | Yang 85 | Mirror | Amin Wu 吳阿敏 — back view | https://www.youtube.com/watch?v=X9HGPGDdiig |
 | Yang 85 | Demo | Fu Zhongwen 傅鍾文 (Part 1) | https://www.youtube.com/watch?v=GYmYgCTpwKI |
@@ -165,7 +165,6 @@ Keyed by hanzi; reused across every form containing the posture. © respective s
 | 斜飞势 | Diagonal Flying | egreenway.com | https://www.egreenway.com/taichichuan/yangn1.htm |
 | 六封四闭 | Six Sealing and Four Closing (Chen) | tcmwindow.com | http://www.tcmwindow.com/taiji/Illustrations/movements/Six-Sealing-and-Four-Closing-in-form-of-Chen-Style-Taiji.shtml |
 | 金刚捣碓 | Buddha's Warrior Pounds the Mortar (Chen) | tcmwindow.com | http://www.tcmwindow.com/taiji/Illustrations/movements/Buddha's-Warrior-Attendant-Pounds-Mortar-in-Chen-Style-Taiji.shtml |
-| 掩手肱拳 | Hidden Hand Punch (Chen) | internalarts.typepad.com | https://internalarts.typepad.com/ken_gullettes_internal_ma/2013/11/when-is-a-punch-not-a-punch-hidden-hand-punch-in-chen-tai-chi.html |
 | 掩手肱拳 | Cover Hand Fist (Chen Zhonghua) | practicalmethod.com | https://practicalmethod.com/2017/05/the-fist-of-covering-hand-yan-shou-gong-chui-toronto-north-york-taiji-class/ |
 | 倒撵猴 / 倒卷肱 | Repulse the Monkey | everydaytaichi.org | https://www.everydaytaichi.org/repulsing-the-monkey2.html |
 | 下势 | Snake Creeps Down | taijiworld.com | https://www.taijiworld.com/tai-chi-posture.html |

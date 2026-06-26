@@ -49,10 +49,10 @@ export const FORM_MEDIA: Record<string, MediaSource[]> = {
     yt('R8NbQecDygQ', '24 Yang Style Tai Chi Form — Full Beginner Instruction', 'instruction', 'Master Pei'),
   ],
   yang40: [
-    yt('WqBI7Rm549I', '杨式四十式太极拳 正面背面 陈思坦示范', 'front', 'Chen Sitan 陈思坦', 'Front + back demonstration'),
+    yt('FowwENJg1xU', 'Yang-Style Tai Chi 40 Form — Front-View Demonstration', 'front', 'Amin Wu 吳阿敏'),
     yt('inPP1EF8okk', '楊式40式太極拳 — Yang Style 40 Form Competition Routine', 'demo', 'Yi Peng 易鵬'),
     yt('QMwZfFVVnCI', '杨氏太极拳四十式 背向演练带口令', 'back', null, 'Back view with spoken count'),
-    yt('Z5mzw_kS9Vk', '（精讲）杨式太极拳40式竞赛套路（一）— Tutorial Part 1', 'instruction', null),
+    yt('w67MYzzl8xk', 'Tai Chi 40 Form — Slow Motion with Instructions', 'instruction', 'Peter Chen', 'Step-by-step slow-motion walkthrough'),
   ],
   yang85: [
     yt('CpyWUq6eMyI', 'Yang-Style Tai Chi Traditional Long Form — Full Front View | 楊式太極拳傳統85式 全套正面演練', 'front', 'Amin Wu 吳阿敏'),
@@ -187,7 +187,6 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   六封四闭: [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Six-Sealing-and-Four-Closing-in-form-of-Chen-Style-Taiji.shtml", 'Six Sealing and Four Closing (Chen, illustrated)', 'tcmwindow.com', '© tcmwindow.com', 'Illustrated Chen-style page')],
   金刚捣碓: [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Buddha's-Warrior-Attendant-Pounds-Mortar-in-Chen-Style-Taiji.shtml", "Buddha's Warrior Attendant Pounds Mortar (Chen, illustrated)", 'tcmwindow.com', '© tcmwindow.com')],
   掩手肱拳: [
-    ref('https://internalarts.typepad.com/ken_gullettes_internal_ma/2013/11/when-is-a-punch-not-a-punch-hidden-hand-punch-in-chen-tai-chi.html', 'Hidden Hand Punch in Chen Tai Chi', 'internalarts.typepad.com', "© Ken Gullette"),
     ref('https://practicalmethod.com/2017/05/the-fist-of-covering-hand-yan-shou-gong-chui-toronto-north-york-taiji-class/', 'The Fist of Covering Hand (Yan Shou Gong Chui)', 'practicalmethod.com', '© Chen Zhonghua / Practical Method'),
   ],
   掩手肱捶: [ref('https://practicalmethod.com/2017/05/the-fist-of-covering-hand-yan-shou-gong-chui-toronto-north-york-taiji-class/', 'The Fist of Covering Hand (Yan Shou Gong Chui)', 'practicalmethod.com', '© Chen Zhonghua / Practical Method')],
