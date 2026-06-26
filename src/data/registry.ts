@@ -233,7 +233,7 @@ export const FORMS: FormMeta[] = [
     id: 'comb48',
     style: 'combined',
     variant: { en: '48 · Combined', sv: '48 · Kombinerad', zh_pinyin: 'Sìshíbā Shì', zh_hans: '四十八式' },
-    count: 48,
+    count: 50,
     lineage: {
       en: '1976 combined routine, predominantly Yang-style.',
       sv: 'Kombinerad rutin från 1976, främst Yang-stil.',
