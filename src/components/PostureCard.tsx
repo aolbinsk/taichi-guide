@@ -57,10 +57,7 @@ export function PostureCard({ posture }: Props) {
       <div className="card__head">
         <span className="card__seq">{posture.seq}</span>
         <div className="card__names">
-          <h3 className="card__title">{posture.names.en}</h3>
-          <p className="card__sub">
-            <span className="card__sv">{posture.names.sv}</span>
-          </p>
+          <h3 className="card__title">{posture.names[lang]}</h3>
           <p className="card__zh">
             <span className="card__pinyin">{posture.names.zh_pinyin}</span>
             <span className="card__hanzi">{posture.names.zh_hans}</span>
@@ -87,7 +84,7 @@ export function PostureCard({ posture }: Props) {
               <img
                 className="card__img"
                 src={posture.media.image}
-                alt={posture.names.en}
+                alt={posture.names[lang]}
                 loading="lazy"
                 decoding="async"
               />

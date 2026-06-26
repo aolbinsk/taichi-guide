@@ -404,15 +404,6 @@ body {
   line-height: 1.25;
 }
 
-.card__sub {
-  margin: 2px 0 0;
-}
-
-.card__sv {
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .card__zh {
   margin: 3px 0 0;
   display: flex;
