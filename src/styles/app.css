@@ -412,6 +412,39 @@ body {
   flex-wrap: wrap;
 }
 
+/* The Chinese line doubles as a "tap to hear" control when audio/TTS exists. */
+.card__zh--speak {
+  background: transparent;
+  border: 0;
+  padding: 2px 0;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 6px;
+  transition: opacity 0.1s ease;
+}
+
+.card__zh--speak:active {
+  opacity: 0.5;
+}
+
+.card__zh--speak:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card__zh-spk {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.card__zh--speak:hover .card__zh-spk {
+  opacity: 0.85;
+}
+
 .card__pinyin {
   font-size: 13px;
   color: #d8c7a0;

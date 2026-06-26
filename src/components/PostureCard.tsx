@@ -58,10 +58,9 @@ export function PostureCard({ posture }: Props) {
 
   const canHear = !!posture.media.audio || ttsOk;
 
-  const playAudio = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    // Prefer a bundled recording; fall back to synthesized Mandarin if it's
-    // missing/unplayable, or if there's no recording at all.
+  // Prefer a bundled recording; fall back to synthesized Mandarin if it's
+  // missing/unplayable, or if there's no recording at all.
+  const pronounce = () => {
     const el = audioRef.current;
     if (posture.media.audio && el) {
       el.currentTime = 0;
@@ -71,6 +70,12 @@ export function PostureCard({ posture }: Props) {
       return;
     }
     if (ttsOk) void speakMandarin(posture.names.zh_hans);
+  };
+
+  // Used by the audio button and the tappable Chinese line; never toggles the card.
+  const onPronounce = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    pronounce();
   };
 
   return (
@@ -83,10 +88,26 @@ export function PostureCard({ posture }: Props) {
         <span className="card__seq">{posture.seq}</span>
         <div className="card__names">
           <h3 className="card__title">{posture.names[lang]}</h3>
-          <p className="card__zh">
-            <span className="card__pinyin">{posture.names.zh_pinyin}</span>
-            <span className="card__hanzi">{posture.names.zh_hans}</span>
-          </p>
+          {canHear ? (
+            <button
+              type="button"
+              className="card__zh card__zh--speak"
+              onClick={onPronounce}
+              aria-label={t.playAudio}
+              title={t.playAudio}
+            >
+              <span className="card__pinyin">{posture.names.zh_pinyin}</span>
+              <span className="card__hanzi">{posture.names.zh_hans}</span>
+              <span className="card__zh-spk" aria-hidden="true">
+                🔊
+              </span>
+            </button>
+          ) : (
+            <p className="card__zh">
+              <span className="card__pinyin">{posture.names.zh_pinyin}</span>
+              <span className="card__hanzi">{posture.names.zh_hans}</span>
+            </p>
+          )}
           {posture.repeatOf !== null && (
             <button
               className="card__repeat"
@@ -101,6 +122,11 @@ export function PostureCard({ posture }: Props) {
         </div>
         <MediaPills posture={posture} ttsOk={ttsOk} />
       </div>
+
+      {/* Rendered outside the expanded body so the head's Chinese line can play it. */}
+      {posture.media.audio && (
+        <audio ref={audioRef} src={posture.media.audio} preload="none" />
+      )}
 
       {expanded && (
         <div className="card__body">
@@ -123,7 +149,7 @@ export function PostureCard({ posture }: Props) {
           <div className="card__actions">
             <button
               className="btn btn--audio"
-              onClick={playAudio}
+              onClick={onPronounce}
               disabled={!canHear}
             >
               ▶ {t.playAudio}
@@ -133,9 +159,6 @@ export function PostureCard({ posture }: Props) {
               {t.media.video} · {t.media.rig}
             </div>
           </div>
-          {posture.media.audio && (
-            <audio ref={audioRef} src={posture.media.audio} preload="none" />
-          )}
         </div>
       )}
     </article>
