@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yang Chengfu Montage Mapper</title>
+<style>
+  :root { --bg:#161616; --panel:#1e1e1e; --line:#333; --txt:#ddd; --mut:#888; --accent:#c2410c; --ok:#15803d; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.4 system-ui,sans-serif; }
+  header { padding:10px 14px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:5; }
+  header h1 { margin:0; font-size:15px; }
+  header p { margin:3px 0 0; color:var(--mut); font-size:12px; }
+  main { display:grid; grid-template-columns:minmax(360px,1fr) 340px; gap:14px; padding:14px; align-items:start; }
+  #gridwrap { position:relative; width:100%; max-width:560px; }
+  #montage { width:100%; display:block; border:1px solid var(--line); }
+  #overlay { position:absolute; inset:0; }
+  .cell { position:absolute; border:1px solid rgba(255,255,255,.06); cursor:pointer; font-size:9px; color:#fff;
+          display:flex; align-items:flex-end; justify-content:center; padding-bottom:1px; text-shadow:0 0 3px #000; overflow:hidden; }
+  .cell:hover { background:rgba(194,65,12,.25); }
+  .cell.mapped { background:rgba(21,128,61,.32); border-color:rgba(21,128,61,.8); }
+  .cell.skip { background:rgba(120,120,120,.28); }
+  .cell.sel { outline:2px solid var(--accent); outline-offset:-2px; z-index:2; background:rgba(194,65,12,.3); }
+  .cell .lab { font-size:9px; white-space:nowrap; }
+  aside { position:sticky; top:64px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  #zoom { width:100%; height:300px; background-image:url('./yang-chengfu-montage.jpg'); background-size:800% 1400%; background-repeat:no-repeat; border:1px solid var(--line); border-radius:4px; }
+  #selinfo { margin:8px 0; font-size:13px; }
+  #selinfo b { color:#fff; }
+  #search { width:100%; padding:7px 9px; background:#111; border:1px solid var(--line); color:var(--txt); border-radius:5px; }
+  #list { list-style:none; margin:8px 0; padding:0; max-height:240px; overflow:auto; border:1px solid var(--line); border-radius:5px; }
+  #list li { padding:6px 9px; cursor:pointer; border-bottom:1px solid #262626; display:flex; gap:8px; align-items:baseline; }
+  #list li:hover { background:#2a2a2a; }
+  #list li .hz { font-size:15px; color:#fff; min-width:auto; }
+  #list li .en { color:var(--mut); font-size:12px; }
+  .row { display:flex; gap:6px; margin:6px 0; flex-wrap:wrap; }
+  button { background:#2a2a2a; color:var(--txt); border:1px solid var(--line); border-radius:5px; padding:6px 10px; cursor:pointer; font-size:12px; }
+  button:hover { background:#363636; }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  #count { font-size:12px; color:var(--mut); margin:6px 0; }
+  textarea { width:100%; height:90px; background:#111; color:var(--txt); border:1px solid var(--line); border-radius:5px; font:11px monospace; padding:6px; }
+  details summary { cursor:pointer; color:var(--mut); margin-top:8px; }
+  kbd { background:#000; border:1px solid var(--line); border-radius:3px; padding:0 4px; font-size:11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Yang Chengfu Montage Mapper</h1>
+  <p>Click a cell → search &amp; pick the posture it shows. Skip non-postures. Autosaves. <b>Export</b> the JSON and send it back. (<kbd>↑↓←→</kbd> move · type to search · <kbd>Enter</kbd> = top match · <kbd>s</kbd> skip)</p>
+</header>
+<main>
+  <div id="gridwrap">
+    <img id="montage" src="./yang-chengfu-montage.jpg" alt="Yang Chengfu form montage (CC BY 3.0, Matthias Wagner)">
+    <div id="overlay"></div>
+  </div>
+  <aside>
+    <div id="zoom"></div>
+    <div id="selinfo"></div>
+    <input id="search" placeholder="Search posture — en / pinyin / 汉字" autocomplete="off">
+    <ul id="list"></ul>
+    <div class="row">
+      <button id="skip">Not a posture (s)</button>
+      <button id="clear">Clear cell</button>
+    </div>
+    <div id="count"></div>
+    <div class="row">
+      <button id="exportBtn" class="primary">Export JSON</button>
+      <button id="copyBtn">Copy</button>
+      <button id="dlBtn">Download</button>
+    </div>
+    <textarea id="json" readonly placeholder="Export output appears here"></textarea>
+    <details>
+      <summary>Resume from saved JSON</summary>
+      <textarea id="importArea" placeholder="Paste a previously exported mapping…"></textarea>
+      <div class="row"><button id="importBtn">Import</button><button id="resetBtn">Reset all</button></div>
+    </details>
+  </aside>
+</main>
+<script>
+const POSTURES = [{"hanzi":"预备势","en":"Preparation / Beginning","pinyin":"Yùbèi Shì"},{"hanzi":"太极起势","en":"Opening of Tai Chi","pinyin":"Tàijí Qǐshì"},{"hanzi":"揽雀尾","en":"Grasp the Bird's Tail","pinyin":"Lǎn Què Wěi"},{"hanzi":"单鞭","en":"Single Whip","pinyin":"Dān Biān"},{"hanzi":"提手上势","en":"Raise Hands and Step Up","pinyin":"Tí Shǒu Shàng Shì"},{"hanzi":"白鹤亮翅","en":"White Crane Spreads Its Wings","pinyin":"Bái Hè Liàng Chì"},{"hanzi":"左搂膝拗步","en":"Brush Knee and Twist Step (Left)","pinyin":"Zuǒ Lǒu Xī Ǎo Bù"},{"hanzi":"手挥琵琶","en":"Hands Strum the Lute","pinyin":"Shǒu Huī Pípá"},{"hanzi":"搂膝拗步","en":"Brush Knee and Twist Step","pinyin":"Lǒu Xī Ǎo Bù"},{"hanzi":"进步搬拦捶","en":"Step Forward, Deflect, Parry and Punch","pinyin":"Jìn Bù Bān Lán Chuí"},{"hanzi":"如封似闭","en":"Apparent Close-Up / Withdraw and Push","pinyin":"Rú Fēng Sì Bì"},{"hanzi":"十字手","en":"Cross Hands","pinyin":"Shí Zì Shǒu"},{"hanzi":"抱虎归山","en":"Embrace Tiger, Return to Mountain","pinyin":"Bào Hǔ Guī Shān"},{"hanzi":"肘底捶","en":"Fist Under Elbow","pinyin":"Zhǒu Dǐ Chuí"},{"hanzi":"倒撵猴","en":"Step Back and Repulse the Monkey","pinyin":"Dào Niǎn Hóu"},{"hanzi":"斜飞势","en":"Slant Flying / Diagonal Flying","pinyin":"Xié Fēi Shì"},{"hanzi":"海底针","en":"Needle at Sea Bottom","pinyin":"Hǎi Dǐ Zhēn"},{"hanzi":"扇通背","en":"Fan Through the Back","pinyin":"Shàn Tōng Bèi"},{"hanzi":"撇身捶","en":"Turn Body, Chop and Punch","pinyin":"Piē Shēn Chuí"},{"hanzi":"云手","en":"Cloud Hands","pinyin":"Yún Shǒu"},{"hanzi":"高探马","en":"High Pat on Horse","pinyin":"Gāo Tàn Mǎ"},{"hanzi":"右分脚","en":"Separate Right Foot","pinyin":"Yòu Fēn Jiǎo"},{"hanzi":"左分脚","en":"Separate Left Foot","pinyin":"Zuǒ Fēn Jiǎo"},{"hanzi":"转身左蹬脚","en":"Turn and Kick with Left Heel","pinyin":"Zhuǎn Shēn Zuǒ Dēng Jiǎo"},{"hanzi":"左右搂膝拗步","en":"Brush Knee and Twist Step (Left and Right)","pinyin":"Zuǒ Yòu Lǒu Xī Ǎo Bù"},{"hanzi":"进步栽捶","en":"Step Forward and Punch Down","pinyin":"Jìn Bù Zāi Chuí"},{"hanzi":"右蹬脚","en":"Kick with Right Heel","pinyin":"Yòu Dēng Jiǎo"},{"hanzi":"双峰贯耳","en":"Strike Opponent’s Ears with Both Fists","pinyin":"Shuāng Fēng Guàn Ěr"},{"hanzi":"转身右蹬脚","en":"Turn Body and Kick with Right Heel","pinyin":"Zhuǎn Shēn Yòu Dēng Jiǎo"},{"hanzi":"野马分鬃","en":"Partition of the Wild Horse’s Mane","pinyin":"Yě Mǎ Fēn Zōng"},{"hanzi":"玉女穿梭","en":"Fair Lady Works the Shuttles","pinyin":"Yù Nǚ Chuān Suō"},{"hanzi":"单鞭下势","en":"Snake Creeps Down / Squatting Single Whip","pinyin":"Dān Biān Xià Shì"},{"hanzi":"右金鸡独立","en":"Golden Rooster Stands on One Leg (Right)","pinyin":"Yòu Jīn Jī Dú Lì"},{"hanzi":"左金鸡独立","en":"Golden Rooster Stands on One Leg (Left)","pinyin":"Zuǒ Jīn Jī Dú Lì"},{"hanzi":"转身白蛇吐信","en":"Turn Body, White Snake Spits Out Tongue","pinyin":"Zhuǎn Shēn Bái Shé Tǔ Xìn"},{"hanzi":"穿掌","en":"Palm Thrust / Cross Hands and Thrust Palm","pinyin":"Chuān Zhǎng"},{"hanzi":"搂膝指裆捶","en":"Brush Knee and Punch Opponent’s Groin","pinyin":"Lǒu Xī Zhǐ Dāng Chuí"},{"hanzi":"上步七星","en":"Step Forward to Seven Stars","pinyin":"Shàng Bù Qī Xīng"},{"hanzi":"退步跨虎","en":"Step Back to Ride the Tiger","pinyin":"Tuì Bù Kuà Hǔ"},{"hanzi":"转身摆莲","en":"Turn Body and Sweep Lotus","pinyin":"Zhuǎn Shēn Bǎi Lián"},{"hanzi":"弯弓射虎","en":"Bend the Bow and Shoot the Tiger","pinyin":"Wān Gōng Shè Hǔ"},{"hanzi":"收势","en":"Closing of Tai Chi / Return to Origin","pinyin":"Shōu Shì"},{"hanzi":"预备势 / 起势","en":"Preparation / Beginning","pinyin":"Yùbèishì / Qǐshì"},{"hanzi":"肘底看捶","en":"Fist Under Elbow","pinyin":"Zhǒudǐ Kàn Chuí"},{"hanzi":"右倒撵猴","en":"Repulse the Monkey — Right","pinyin":"Yòu Dào Niǎn Hóu"},{"hanzi":"左右倒撵猴","en":"Repulse the Monkey (Left & Right)","pinyin":"Zuǒ Yòu Dào Niǎn Hóu"},{"hanzi":"转身撇身捶","en":"Turn Body, Deflect, Parry and Punch","pinyin":"Zhuǎnshēn Piěshēnchuí"},{"hanzi":"上步揽雀尾","en":"Step Up and Grasp the Bird’s Tail","pinyin":"Shàngbù Lǎn Què Wěi"},{"hanzi":"左打虎势","en":"Strike Tiger — Left","pinyin":"Zuǒ Dǎ Hǔ Shì"},{"hanzi":"右打虎势","en":"Strike Tiger — Right","pinyin":"Yòu Dǎ Hǔ Shì"},{"hanzi":"回身右蹬脚","en":"Kick with Right Heel","pinyin":"Huíshēn Yòu Dēng Jiǎo"},{"hanzi":"左蹬脚","en":"Kick with Left Heel","pinyin":"Zuǒ Dēng Jiǎo"},{"hanzi":"斜单鞭","en":"Diagonal Single Whip","pinyin":"Xié Dānbiān"},{"hanzi":"下势","en":"Snake Creeps Down (Low Posture)","pinyin":"Xià Shì"},{"hanzi":"十字腿","en":"Cross Palms and Thrust Out","pinyin":"Shízì Tuǐ"},{"hanzi":"进步指裆捶","en":"Step Up, Punch to the Groin","pinyin":"Jìnbù Zhǐdāngchuí"},{"hanzi":"弯弓射虎 / 收势","en":"Draw the Bow to Shoot the Tiger / Closing","pinyin":"Wāngōng Shè Hǔ / Shōushì"},{"hanzi":"预备起势","en":"Preparation and Beginning","pinyin":"Yùbèi Qǐshì"}];
+const COLS=8, ROWS=14, N=COLS*ROWS, SKIP='__skip__';
+const overlay=document.getElementById('overlay');
+const KEY='ycMontageMapping.v1';
+let mapping = JSON.parse(localStorage.getItem(KEY)||'{}');
+let sel=0;
+const pmap=new Map(POSTURES.map(p=>[p.hanzi,p]));
+
+// build cells
+const cells=[];
+for(let i=0;i<N;i++){
+  const col=i%COLS, row=(i/COLS|0);
+  const d=document.createElement('div');
+  d.className='cell'; d.dataset.i=i;
+  d.style.left=(col*100/COLS)+'%'; d.style.top=(row*100/ROWS)+'%';
+  d.style.width=(100/COLS)+'%'; d.style.height=(100/ROWS)+'%';
+  d.addEventListener('click',()=>select(i));
+  overlay.appendChild(d); cells.push(d);
+}
+function save(){ localStorage.setItem(KEY,JSON.stringify(mapping)); }
+function shortEn(en){ return en.replace(/\s*\(.*?\)/g,'').split(/[ ,—]/).slice(0,2).join(' '); }
+function renderCell(i){
+  const d=cells[i], v=mapping[i];
+  d.classList.toggle('mapped', !!v && v!==SKIP);
+  d.classList.toggle('skip', v===SKIP);
+  d.classList.toggle('sel', i===sel);
+  const p=v&&v!==SKIP?pmap.get(v):null;
+  d.innerHTML = p?('<span class="lab">'+p.hanzi+'</span>') : (v===SKIP?'<span class="lab">—</span>':'<span class="lab" style="color:#666">'+(i+1)+'</span>');
+}
+function renderAll(){ for(let i=0;i<N;i++) renderCell(i); updateCount(); }
+function updateCount(){
+  const mapped=Object.values(mapping).filter(v=>v&&v!==SKIP).length;
+  const skipped=Object.values(mapping).filter(v=>v===SKIP).length;
+  document.getElementById('count').textContent=mapped+' mapped · '+skipped+' skipped · '+(N-mapped-skipped)+' left';
+}
+function select(i){
+  sel=i;
+  const col=i%COLS, row=(i/COLS|0);
+  document.getElementById('zoom').style.backgroundPosition=(col*100/(COLS-1))+'% '+(row*100/(ROWS-1))+'%';
+  const v=mapping[i];
+  const cur = v===SKIP?'<i>not a posture</i>':(v?('<b>'+(pmap.get(v)?.hanzi||v)+'</b> '+(pmap.get(v)?.en||'')):'<i style="color:#888">unassigned</i>');
+  document.getElementById('selinfo').innerHTML='Cell <b>'+(i+1)+'</b> (row '+(row+1)+', col '+(col+1)+') → '+cur;
+  renderAll();
+}
+function assign(hanzi){ mapping[sel]=hanzi; save(); next(); }
+function next(){ let i=sel; for(let k=0;k<N;k++){ i=(i+1)%N; if(!mapping[i]){ select(i); return; } } select((sel+1)%N); }
+// list
+const search=document.getElementById('search'), list=document.getElementById('list');
+function renderList(){
+  const q=search.value.trim().toLowerCase();
+  const items=POSTURES.filter(p=> !q || p.hanzi.includes(q) || (p.en||'').toLowerCase().includes(q) || (p.pinyin||'').toLowerCase().includes(q));
+  list.innerHTML='';
+  for(const p of items.slice(0,60)){
+    const li=document.createElement('li');
+    li.innerHTML='<span class="hz">'+p.hanzi+'</span><span class="en">'+p.en+'</span>';
+    li.addEventListener('click',()=>{assign(p.hanzi); search.value=''; renderList();});
+    list.appendChild(li);
+  }
+}
+search.addEventListener('input',renderList);
+search.addEventListener('keydown',e=>{ if(e.key==='Enter'){ const first=list.querySelector('li'); if(first) first.click(); e.preventDefault(); } });
+document.getElementById('skip').addEventListener('click',()=>{ mapping[sel]=SKIP; save(); next(); });
+document.getElementById('clear').addEventListener('click',()=>{ delete mapping[sel]; save(); select(sel); });
+document.addEventListener('keydown',e=>{
+  if(document.activeElement===search){ if(e.key==='Escape'){search.value='';renderList();} return; }
+  if(e.key==='ArrowRight'){select((sel+1)%N);e.preventDefault();}
+  else if(e.key==='ArrowLeft'){select((sel-1+N)%N);e.preventDefault();}
+  else if(e.key==='ArrowDown'){select((sel+COLS)%N);e.preventDefault();}
+  else if(e.key==='ArrowUp'){select((sel-COLS+N)%N);e.preventDefault();}
+  else if(e.key==='s'){ mapping[sel]=SKIP; save(); next(); }
+  else if(e.key.length===1 && /[a-z0-9]/i.test(e.key)){ search.focus(); }
+});
+// export/import
+document.getElementById('exportBtn').addEventListener('click',()=>{
+  const real={}; for(const [k,v] of Object.entries(mapping)) if(v&&v!==SKIP) real[k]=v;
+  document.getElementById('json').value=JSON.stringify({cells:real, raw:mapping},null,0);
+});
+document.getElementById('copyBtn').addEventListener('click',()=>{ const t=document.getElementById('json'); t.select(); document.execCommand('copy'); });
+document.getElementById('dlBtn').addEventListener('click',()=>{
+  const real={}; for(const [k,v] of Object.entries(mapping)) if(v&&v!==SKIP) real[k]=v;
+  const blob=new Blob([JSON.stringify({cells:real,raw:mapping})],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='montage-mapping.json'; a.click();
+});
+document.getElementById('importBtn').addEventListener('click',()=>{
+  try{ const o=JSON.parse(document.getElementById('importArea').value); mapping=o.raw||o.cells||o; save(); select(0); }
+  catch(e){ alert('Invalid JSON'); }
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{ if(confirm('Clear all mappings?')){ mapping={}; save(); select(0);} });
+renderList(); select(0);
+</script>
+</body>
+</html>
