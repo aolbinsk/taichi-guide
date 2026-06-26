@@ -14,6 +14,17 @@ function youTubeId(url: string): string | null {
   return m ? m[1] : null;
 }
 
+/**
+ * Resolve an app-bundled asset path (e.g. "/media/thumbs/x.jpg") against the
+ * deploy base so it works under a GitHub Pages subpath (vite `base: './'`).
+ * External (http) URLs pass through untouched.
+ */
+function asset(url: string): string {
+  if (/^https?:\/\//.test(url) || url.startsWith('data:')) return url;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  return base + (url.startsWith('/') ? url : `/${url}`);
+}
+
 function viewLabel(view: MediaView | undefined, lang: 'en' | 'sv'): string {
   if (!view) return '';
   return UI[lang].mediaViews[view] ?? view;
@@ -51,7 +62,16 @@ function VideoTile({ src, alt }: { src: MediaSource; alt: string }) {
         >
           {id && (
             <img
-              src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
+              // Prefer the localized poster (offline-capable); fall back to
+              // YouTube's CDN if it isn't present (e.g. dev before localizing).
+              src={asset(`/media/thumbs/${id}.jpg`)}
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.dataset.fallback) {
+                  img.dataset.fallback = '1';
+                  img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                }
+              }}
               alt={alt}
               loading="lazy"
               decoding="async"
@@ -94,7 +114,7 @@ export function MediaGallery({ sources, alt }: Props) {
         <div className="mg__images">
           {images.map((s) => (
             <figure key={s.url} className="mg__figure">
-              <img className="card__img" src={s.url} alt={alt} loading="lazy" decoding="async" />
+              <img className="card__img" src={asset(s.url)} alt={alt} loading="lazy" decoding="async" />
               <figcaption className="mg__cap">
                 <a href={s.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                   {s.author || s.source}
