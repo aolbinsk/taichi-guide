@@ -32,7 +32,7 @@ humans). At load time `attachMedia(formId, data)` merges:
    has per-posture chapter markers, each posture gets a "This posture" tile that
    embeds the video **scoped to that posture's segment** via `?start=&end=`.
    Nothing is downloaded — it's a normal embed bounded in time, so it's fully
-   legal to publish. Currently wired for **Yang 24** (24/24 postures, timestamps
+   legal to publish. Currently wired for **Yang 24** (24/24) and **Yang 40** (40/40 — after its dataset was rebuilt to the authoritative order), timestamps
    from the video author's own chapters). Add more forms when a demo video has
    reliable per-posture chapters (`yt-dlp --print "%(chapters)j"`).
 
