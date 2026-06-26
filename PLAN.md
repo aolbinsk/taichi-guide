@@ -60,7 +60,8 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 
 ### Offline strategy
 `vite-plugin-pwa` (Workbox) precaches the app shell **and** bundled data/media
-(`js,css,html,svg,png,webp,m4a`). First load online → fully usable offline after.
+(`js,css,html,svg,png,jpg,jpeg,webp,m4a,woff2`). First load online → fully usable
+offline after — including localized video posters and self-hosted posture images.
 
 ## Phased roadmap
 
@@ -77,6 +78,10 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 - [x] **Media research pass:** catalogued per-form demonstration videos (all 14
       forms, multiple angles) + per-posture reference resources in a shared,
       hanzi-keyed library (`data/mediaLibrary.ts`), attributed in `RESOURCES.md`.
+- [x] **Media localization pass** (`MEDIA_DOWNLOAD_PLAN.md`): verified every
+      catalogued link (`scripts/check-links.mjs`; replaced 2 dead Yang-40 videos),
+      localized all 52 video poster thumbnails, and self-hosted 4 free-licensed
+      (PD/CC) posture images — all precached for offline use.
 - [x] App icons (192/512 PNG) for installability.
 
 ### Phase 2 — Structural expansion
@@ -87,8 +92,10 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 ### Phase 3 — Interactive media suite
 - [x] Inline video in the card: per-form demonstration clips (front / mirror /
       step-by-step) embedded via YouTube; attributed gallery with reference links.
-- [ ] Self-hosted loopable `.mp4` per posture for true offline (rights permitting);
-      `scripts/localize-media.mjs` localizes poster thumbnails as a first step.
+- [x] Localized video poster thumbnails (`scripts/localize-media.mjs`, 52/52) so
+      posters render offline; gallery prefers the local file, falls back to remote.
+- [ ] Self-hosted loopable `.mp4` per posture for true offline (rights permitting) —
+      Phase D of `MEDIA_DOWNLOAD_PLAN.md`, deferred (bundle size + rights-sensitive).
 - [ ] WebGL/Three.js skeletal rig viewer with orbit camera.
 - [ ] If native polish is needed, wrap the PWA in Capacitor (audio/haptics/3D).
 
