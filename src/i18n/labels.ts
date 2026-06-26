@@ -57,3 +57,53 @@ export const TAG_LABELS: Record<UiLang, Record<Tag, string>> = {
     'cloud-hands': 'Molnhänder',
   },
 };
+
+/**
+ * Swedish translations for the short scrubber milestone labels. The English
+ * label (as authored in each dataset) is the lookup key and the fallback, so
+ * an untranslated label degrades gracefully rather than breaking navigation.
+ * Part markers (P1–P3) are language-neutral codes and intentionally omitted.
+ */
+const MILESTONE_SV: Record<string, string> = {
+  Start: 'Start',
+  Closing: 'Avslutning',
+  'Brush Knee': 'Borsta knä',
+  Cannon: 'Kanon',
+  'Cannon Fists': 'Kanonnävar',
+  'Carry Tiger': 'Bär tigern',
+  'Cloud Hands': 'Molnhänder',
+  'Cover & Strike': 'Täck & slå',
+  'Cross Hands': 'Korsade händer',
+  'Embrace Tiger': 'Omfamna tigern',
+  'Fa-jin Punch': 'Fa-jin-slag',
+  'Fair Lady': 'Vacker dam',
+  'Fair Lady Shuttles': 'Vacker dam skyttlar',
+  'Fall & Split': 'Fall & klyvning',
+  'Golden Rooster': 'Gyllene tupp',
+  'Heel Kick': 'Hälspark',
+  'Heel Kicks': 'Hälsparkar',
+  'Jade Lady': 'Jadekvinna',
+  'Jade Maiden': 'Jadejungfru',
+  'Kick Section': 'Sparksektion',
+  Kicks: 'Sparkar',
+  'Left Single Whip': 'Vänster enkelt piskslag',
+  'Lower Sweep': 'Låg svepning',
+  Needle: 'Nål',
+  'Open/Close Hands': 'Öppna/stäng händer',
+  'Pound Mortar': 'Stöt mortel',
+  'Repulse Monkey': 'Driv tillbaka apan',
+  'Separate Feet & Kicks': 'Dela fötter & sparkar',
+  'Shoot Tiger': 'Skjut tigern',
+  Shuttles: 'Skyttlar',
+  'Single Whip': 'Enkelt piskslag',
+  'Snake & Rooster': 'Orm & tupp',
+  'Snake Creeps': 'Ormen kryper',
+  'Snake Creeps Down': 'Ormen kryper ned',
+  'Snake Down': 'Ormen ned',
+  'Step Up Seven Stars': 'Kliv upp sju stjärnor',
+};
+
+/** Localize a scrubber milestone label; English is the key and the fallback. */
+export function milestoneLabel(label: string, lang: UiLang): string {
+  return lang === 'sv' ? MILESTONE_SV[label] ?? label : label;
+}

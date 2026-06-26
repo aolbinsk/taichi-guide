@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import type { Milestone } from '../types';
 import { useStore } from '../state/useStore';
+import { milestoneLabel } from '../i18n/labels';
 
 interface Props {
   milestones: Milestone[];
@@ -15,6 +16,7 @@ function tick() {
 
 export function Scrubber({ milestones }: Props) {
   const scrollTo = useStore((s) => s.scrollTo);
+  const lang = useStore((s) => s.lang);
   const railRef = useRef<HTMLDivElement | null>(null);
   const [dragging, setDragging] = useState(false);
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
@@ -84,14 +86,14 @@ export function Scrubber({ milestones }: Props) {
             }}
             tabIndex={-1}
           >
-            <span className="scrubber__label">{m.label}</span>
+            <span className="scrubber__label">{milestoneLabel(m.label, lang)}</span>
           </button>
         ))}
       </div>
 
       {dragging && activeIdx !== null && (
         <div className="scrubber__bubble" style={{ top: bubbleY }}>
-          {milestones[activeIdx].label}
+          {milestoneLabel(milestones[activeIdx].label, lang)}
         </div>
       )}
     </>
