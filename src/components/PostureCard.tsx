@@ -1,18 +1,20 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Posture } from '../types';
 import { useStore } from '../state/useStore';
 import { UI } from '../i18n/labels';
+import { speakMandarin, stopSpeaking, ttsAvailable } from '../lib/tts';
 
 interface Props {
   posture: Posture;
 }
 
 /** Tiny status pills indicating which media a posture has available. */
-function MediaPills({ posture }: Props) {
+function MediaPills({ posture, ttsOk }: Props & { ttsOk: boolean }) {
   const lang = useStore((s) => s.lang);
   const m = posture.media;
   const pills: { key: string; label: string; on: boolean }[] = [
-    { key: 'audio', label: UI[lang].media.audio, on: !!m.audio },
+    // Audio is available from a bundled recording or on-device Mandarin TTS.
+    { key: 'audio', label: UI[lang].media.audio, on: !!m.audio || ttsOk },
     { key: 'image', label: UI[lang].media.image, on: !!m.image },
     { key: 'video', label: UI[lang].media.video, on: !!m.video },
     { key: 'rig', label: UI[lang].media.rig, on: !!m.rig },
@@ -38,14 +40,37 @@ export function PostureCard({ posture }: Props) {
   const expanded = expandedSeq === posture.seq;
   const t = UI[lang];
 
+  // Detect on-device Mandarin TTS once; gates the pronunciation control.
+  const [ttsOk, setTtsOk] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    ttsAvailable().then((ok) => alive && setTtsOk(ok));
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // Stop any speech when this card collapses or unmounts.
+  useEffect(() => {
+    if (!expanded) return;
+    return () => stopSpeaking();
+  }, [expanded]);
+
+  const canHear = !!posture.media.audio || ttsOk;
+
   const playAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!posture.media.audio) return;
+    // Prefer a bundled recording; fall back to synthesized Mandarin if it's
+    // missing/unplayable, or if there's no recording at all.
     const el = audioRef.current;
-    if (el) {
+    if (posture.media.audio && el) {
       el.currentTime = 0;
-      void el.play().catch(() => {/* autoplay/asset missing — ignore in scaffold */});
+      el.play().catch(() => {
+        if (ttsOk) void speakMandarin(posture.names.zh_hans);
+      });
+      return;
     }
+    if (ttsOk) void speakMandarin(posture.names.zh_hans);
   };
 
   return (
@@ -74,7 +99,7 @@ export function PostureCard({ posture }: Props) {
             </button>
           )}
         </div>
-        <MediaPills posture={posture} />
+        <MediaPills posture={posture} ttsOk={ttsOk} />
       </div>
 
       {expanded && (
@@ -99,7 +124,7 @@ export function PostureCard({ posture }: Props) {
             <button
               className="btn btn--audio"
               onClick={playAudio}
-              disabled={!posture.media.audio}
+              disabled={!canHear}
             >
               ▶ {t.playAudio}
             </button>

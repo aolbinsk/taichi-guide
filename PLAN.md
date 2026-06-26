@@ -69,10 +69,12 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 - [x] Main list grouped by form part; collapsible posture cards.
 - [x] Right-edge thin scrubber: tap-to-jump, drag-to-fast-scroll, haptic tick, overlay bubble.
 - [x] Tri-layer text (EN/SV + pinyin + hanzi) with EN⇄SV toggle (persisted).
-- [x] Media status pills; lazy hero image w/ placeholder; local audio play button.
+- [x] Media status pills; lazy hero image w/ placeholder.
+- [x] Mandarin pronunciation via on-device Web Speech TTS (no assets, offline-
+      capable; a bundled recording in `Media.audio` takes priority when present).
 - [x] Diacritic-insensitive fuzzy search + category tag chips.
-- [ ] **Content pass:** verify/replace seed translations, add real images & <100 KB audio.
-- [ ] App icons (192/512 PNG) for installability.
+- [ ] **Content pass:** verify/replace seed translations & add real images.
+- [x] App icons (192/512 PNG) for installability.
 
 ### Phase 2 — Structural expansion
 - [x] Multiple forms (14, all families) behind a family-grouped form switcher.
@@ -87,8 +89,9 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 ## Open questions for the next iteration
 1. **Which Yang 108 enumeration is canonical for you?** Lineages differ on
    counts/order; seed uses a common one — confirm so numbering is "right."
-2. ~~Audio source~~ **Decided:** TTS-generated Mandarin audio for now (fast,
-   consistent); revisit authentic human recordings later if quality warrants.
+2. ~~Audio source~~ **Done:** on-device Web Speech TTS speaks the hanzi (no
+   assets, offline-capable). Note voice quality varies by device; pre-rendered
+   recordings can later override per-posture via `Media.audio` for consistency.
 3. **Tag taxonomy:** is the current set (stance/kick/hand-deflection/strike/
    transition/opening-closing/cloud-hands/repetitive) the right vocabulary?
 4. **Swedish descriptions:** seed has best-effort SV — who reviews/owns them?

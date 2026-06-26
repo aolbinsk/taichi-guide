@@ -68,7 +68,7 @@ export const formData: FormData = {
         sv: 'Stå upprätt med fötterna i axelbredd, armarna avslappnat hängande, och låt kroppen sjunka och andningen lugna sig innan formen börjar.',
       },
       tags: ['opening-closing', 'stance'],
-      media: { image: 'img/001.webp', audio: 'audio/001.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -84,7 +84,7 @@ export const formData: FormData = {
         sv: 'Lyft båda armarna framåt till axelhöjd, sänk sedan armbågarna och tryck handflatorna nedåt medan knäna böjs något.',
       },
       tags: ['opening-closing'],
-      media: { image: 'img/002.webp', audio: 'audio/002.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -100,7 +100,7 @@ export const formData: FormData = {
         sv: 'Vrid och flytta vikten för att utföra avvärjning, tillbakarullning, press och tryck i följd, formens centrala energimönster.',
       },
       tags: ['hand-deflection'],
-      media: { image: 'img/003.webp', audio: 'audio/003.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -116,7 +116,7 @@ export const formData: FormData = {
         sv: 'Forma en krokhand bakåt medan den främre handflatan trycker utåt, armarna öppnas brett över en vid bågställning.',
       },
       tags: ['hand-deflection', 'stance'],
-      media: { image: 'img/004.webp', audio: 'audio/004.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -132,7 +132,7 @@ export const formData: FormData = {
         sv: 'För samman händerna framför bröstet med höger fot på hälen, samla energi som om man pressar mot en motståndare.',
       },
       tags: ['hand-deflection', 'transition'],
-      media: { image: 'img/005.webp', audio: 'audio/005.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -148,7 +148,7 @@ export const formData: FormData = {
         sv: 'Höger hand stiger för att skydda ovanför huvudet medan vänster hand sjunker lågt, kroppen lyfter i en tom främre ställning.',
       },
       tags: ['hand-deflection', 'stance'],
-      media: { image: 'img/006.webp', audio: 'audio/006.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -164,7 +164,7 @@ export const formData: FormData = {
         sv: 'Svep ena handen över det främre knät för att avleda lågt medan den andra handflatan trycker framåt i en bågställning.',
       },
       tags: ['hand-deflection', 'strike'],
-      media: { image: 'img/007.webp', audio: 'audio/007.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -180,7 +180,7 @@ export const formData: FormData = {
         sv: 'För samman händerna som om man håller en luta, främre handen hög och bakre handen låg, för att fånga en inkommande arm.',
       },
       tags: ['hand-deflection', 'transition'],
-      media: { image: 'img/008.webp', audio: 'audio/008.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -196,7 +196,7 @@ export const formData: FormData = {
         sv: 'Upprepa knäborstningens avledning och det främre handtrycket, och avancera genom flera bågställningar.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/009.webp', audio: 'audio/009.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 7,
     },
     {
@@ -212,7 +212,7 @@ export const formData: FormData = {
         sv: 'Avled med underarmen, parera med den öppna handen, kliv sedan in och leverera ett framåtriktat knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection'],
-      media: { image: 'img/010.webp', audio: 'audio/010.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -228,7 +228,7 @@ export const formData: FormData = {
         sv: 'Korsa och separera handlederna för att neutralisera ett grepp, dra tillbaka och tryck sedan båda handflatorna framåt i en bågställning.',
       },
       tags: ['hand-deflection', 'opening-closing'],
-      media: { image: 'img/011.webp', audio: 'audio/011.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -244,7 +244,7 @@ export const formData: FormData = {
         sv: 'Vrid och för samman armarna korsade framför bröstet, med jämn vikt, för att avsluta denna del av formen.',
       },
       tags: ['opening-closing', 'transition'],
-      media: { image: 'img/012.webp', audio: 'audio/012.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -260,7 +260,7 @@ export const formData: FormData = {
         sv: 'Vrid mot det diagonala hörnet, borsta knät och tryck, och utför sedan en hörntillbakarullning och press.',
       },
       tags: ['hand-deflection', 'transition'],
-      media: { image: 'img/013.webp', audio: 'audio/013.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -276,7 +276,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna och för den bakre knytnäven under den främre armbågen i en tom ställning, redo att slå uppåt.',
       },
       tags: ['strike', 'stance'],
-      media: { image: 'img/014.webp', audio: 'audio/014.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -292,7 +292,7 @@ export const formData: FormData = {
         sv: 'Reträtt steg för steg, varje gång dras ena handflatan till höften medan den andra trycker framåt i brösthöjd.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/015.webp', audio: 'audio/015.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -308,7 +308,7 @@ export const formData: FormData = {
         sv: 'Dela armarna isär på diagonalen, den övre handen flammar ut och upp medan kroppen öppnas till en vid ställning.',
       },
       tags: ['hand-deflection', 'stance'],
-      media: { image: 'img/016.webp', audio: 'audio/016.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -324,7 +324,7 @@ export const formData: FormData = {
         sv: 'Återigen samla händerna framför bröstet med den främre hälen i marken, för att bygga upp pressande energi.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/017.webp', audio: 'audio/017.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 5,
     },
     {
@@ -340,7 +340,7 @@ export const formData: FormData = {
         sv: 'Lyft höger hand för att skydda högt och sänk vänster hand lågt i en tom främre ställning, upprepa tranpositionen.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/018.webp', audio: 'audio/018.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 6,
     },
     {
@@ -356,7 +356,7 @@ export const formData: FormData = {
         sv: 'Borsta knät för att avleda en låg attack medan motsatt handflata trycks framåt i en bågställning.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/019.webp', audio: 'audio/019.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 7,
     },
     {
@@ -372,7 +372,7 @@ export const formData: FormData = {
         sv: 'Böj framåt och stöt fingertopparna på ena handen nedåt som om man spetsar mot golvet, för att frigöra en gripen handled.',
       },
       tags: ['hand-deflection', 'stance'],
-      media: { image: 'img/020.webp', audio: 'audio/020.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -388,7 +388,7 @@ export const formData: FormData = {
         sv: 'Res dig och sprid armarna som en öppnande solfjäder, ena handen lyfter över huvudet medan den andra trycker framåt.',
       },
       tags: ['hand-deflection', 'strike'],
-      media: { image: 'img/021.webp', audio: 'audio/021.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -404,7 +404,7 @@ export const formData: FormData = {
         sv: 'Snurra kroppen runt och sving baksidan av knytnäven utåt i en huggande båge, följt av ett framåtriktat slag.',
       },
       tags: ['strike', 'transition'],
-      media: { image: 'img/022.webp', audio: 'audio/022.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -420,7 +420,7 @@ export const formData: FormData = {
         sv: 'Avled, parera och driv sedan en knytnäve framåt mot målet medan du kliver in.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/023.webp', audio: 'audio/023.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -436,7 +436,7 @@ export const formData: FormData = {
         sv: 'Upprepa avvärjning, tillbakarullning, press och tryck, och cykla genom de fyra grundenergierna.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/024.webp', audio: 'audio/024.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -452,7 +452,7 @@ export const formData: FormData = {
         sv: 'Kroka den bakre handen och tryck ut den främre handflatan, öppna till en vid bågställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/025.webp', audio: 'audio/025.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -468,7 +468,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna kontinuerligt framför kroppen medan du sidsteg, midjan vrider för att driva rotationen.',
       },
       tags: ['cloud-hands', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/026.webp', audio: 'audio/026.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -484,7 +484,7 @@ export const formData: FormData = {
         sv: 'Avsluta molnhänderna genom att kroka den bakre handen och trycka den främre handflatan utåt till ett enkelt piskslag.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/027.webp', audio: 'audio/027.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -500,7 +500,7 @@ export const formData: FormData = {
         sv: 'Dra in den bakre foten och sträck ena handflatan framåt över den andra som för att klappa en hög häst, med upprätt kropp.',
       },
       tags: ['hand-deflection', 'transition'],
-      media: { image: 'img/028.webp', audio: 'audio/028.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -516,7 +516,7 @@ export const formData: FormData = {
         sv: 'Korsa handlederna, öppna sedan armarna och sparka höger tår ut mot diagonalen i en balanserad stående spark.',
       },
       tags: ['kick'],
-      media: { image: 'img/029.webp', audio: 'audio/029.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -532,7 +532,7 @@ export const formData: FormData = {
         sv: 'Korsa handlederna igen och sparka vänster tår ut mot motsatt diagonal, armarna sprids brett för balans.',
       },
       tags: ['kick'],
-      media: { image: 'img/030.webp', audio: 'audio/030.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -548,7 +548,7 @@ export const formData: FormData = {
         sv: 'Pivotera på stödfoten och stöt sedan vänster häl framåt medan armarna öppnas åt vardera sidan.',
       },
       tags: ['kick', 'transition'],
-      media: { image: 'img/031.webp', audio: 'audio/031.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -564,7 +564,7 @@ export const formData: FormData = {
         sv: 'Kliv ned från sparken och borsta varje knä i tur och ordning medan motsatt handflata trycks framåt.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/032.webp', audio: 'audio/032.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 7,
     },
     {
@@ -580,7 +580,7 @@ export const formData: FormData = {
         sv: 'Avancera och driv knytnäven nedåt mot motståndarens nedre kropp medan knät borstas åt sidan.',
       },
       tags: ['strike', 'hand-deflection'],
-      media: { image: 'img/033.webp', audio: 'audio/033.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -596,7 +596,7 @@ export const formData: FormData = {
         sv: 'Vänd dig om och sving baksidan av knytnäven utåt i en huggande båge, och följ sedan med ett framåtriktat slag.',
       },
       tags: ['strike', 'transition', 'repetitive'],
-      media: { image: 'img/034.webp', audio: 'audio/034.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 22,
     },
     {
@@ -612,7 +612,7 @@ export const formData: FormData = {
         sv: 'Avled och parera, kliv sedan in och leverera ett framåtriktat knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/035.webp', audio: 'audio/035.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -628,7 +628,7 @@ export const formData: FormData = {
         sv: 'Korsa och öppna armarna och stöt sedan höger häl framåt i en kontrollerad stående spark.',
       },
       tags: ['kick'],
-      media: { image: 'img/036.webp', audio: 'audio/036.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -644,7 +644,7 @@ export const formData: FormData = {
         sv: 'Kliv ned och för båda nävarna i en vid båge mot motståndarens tinningar i ett tångslag.',
       },
       tags: ['strike'],
-      media: { image: 'img/037.webp', audio: 'audio/037.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -660,7 +660,7 @@ export const formData: FormData = {
         sv: 'Pivotera kroppen runt och stöt vänster häl utåt medan armarna separerar.',
       },
       tags: ['kick', 'transition', 'repetitive'],
-      media: { image: 'img/038.webp', audio: 'audio/038.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 31,
     },
     {
@@ -676,7 +676,7 @@ export const formData: FormData = {
         sv: 'Vrid helt på stödbenet och driv höger häl framåt, och fullborda hälsparksparet.',
       },
       tags: ['kick', 'transition'],
-      media: { image: 'img/039.webp', audio: 'audio/039.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -692,7 +692,7 @@ export const formData: FormData = {
         sv: 'Landa från sparken in i en sekvens av avledning, parering och framåtslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/040.webp', audio: 'audio/040.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -708,7 +708,7 @@ export const formData: FormData = {
         sv: 'Korsa och separera handlederna för att frigöra ett grepp, dra tillbaka och tryck sedan båda handflatorna framåt.',
       },
       tags: ['hand-deflection', 'opening-closing', 'repetitive'],
-      media: { image: 'img/041.webp', audio: 'audio/041.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 11,
     },
     {
@@ -724,7 +724,7 @@ export const formData: FormData = {
         sv: 'Vrid och samla armarna korsade framför bröstet med jämn vikt, för att avsluta sparkdelen.',
       },
       tags: ['opening-closing', 'transition', 'repetitive'],
-      media: { image: 'img/042.webp', audio: 'audio/042.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 12,
     },
     {
@@ -740,7 +740,7 @@ export const formData: FormData = {
         sv: 'Vrid mot hörnet, borsta knät och tryck, och utför sedan en hörntillbakarullning och press.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/043.webp', audio: 'audio/043.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 13,
     },
     {
@@ -756,7 +756,7 @@ export const formData: FormData = {
         sv: 'Forma den bakre krokhanden och tryck ut den främre handflatan till en vid piskslagsställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/044.webp', audio: 'audio/044.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -772,7 +772,7 @@ export const formData: FormData = {
         sv: 'Kliv diagonalt och dela armarna isär, den ledande handen flammar upp under motståndarens arm som en hästman.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/045.webp', audio: 'audio/045.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -788,7 +788,7 @@ export const formData: FormData = {
         sv: 'Cykla genom avvärjning, tillbakarullning, press och tryck för att samla och omdirigera energi.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/046.webp', audio: 'audio/046.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -804,7 +804,7 @@ export const formData: FormData = {
         sv: 'Kroka den bakre handen och tryck den främre handflatan utåt, öppna till en bred bågställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/047.webp', audio: 'audio/047.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -820,7 +820,7 @@ export const formData: FormData = {
         sv: 'Vrid till vart och ett av de fyra hörnen i tur och ordning, ena handen avvärjer uppåt över huvudet medan den andra trycker framåt som att föra en skyttel.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/048.webp', audio: 'audio/048.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -836,7 +836,7 @@ export const formData: FormData = {
         sv: 'Återgå till mitten och cykla genom avvärjning, tillbakarullning, press och tryck.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/049.webp', audio: 'audio/049.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -852,7 +852,7 @@ export const formData: FormData = {
         sv: 'Forma den bakre kroken och tryck den främre handflatan utåt till piskslaget.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/050.webp', audio: 'audio/050.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -868,7 +868,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna kontinuerligt medan du sidsteg, midjan vrider för att driva rotationen.',
       },
       tags: ['cloud-hands', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/051.webp', audio: 'audio/051.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 26,
     },
     {
@@ -884,7 +884,7 @@ export const formData: FormData = {
         sv: 'Avsluta molnhänderna till ett enkelt piskslag, kroka den bakre handen och tryck den främre handflatan ut.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/052.webp', audio: 'audio/052.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -900,7 +900,7 @@ export const formData: FormData = {
         sv: 'Sjunk djupt ned i en låg huk och låt den främre handflatan glida ned längs det utsträckta benet nära golvet.',
       },
       tags: ['stance', 'hand-deflection'],
-      media: { image: 'img/053.webp', audio: 'audio/053.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -916,7 +916,7 @@ export const formData: FormData = {
         sv: 'Res dig från den låga ställningen och lyft höger knä högt med höger hand upplyft, balanserande på ett ben.',
       },
       tags: ['stance', 'kick'],
-      media: { image: 'img/054.webp', audio: 'audio/054.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -932,7 +932,7 @@ export const formData: FormData = {
         sv: 'Byt ben och lyft vänster knä högt med vänster hand upplyft, och behåll balansen på ett ben.',
       },
       tags: ['stance', 'kick'],
-      media: { image: 'img/055.webp', audio: 'audio/055.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -948,7 +948,7 @@ export const formData: FormData = {
         sv: 'Reträtt steg för steg, dra ena handflatan till höften medan den andra trycker framåt i brösthöjd.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/056.webp', audio: 'audio/056.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 15,
     },
     {
@@ -964,7 +964,7 @@ export const formData: FormData = {
         sv: 'Dela armarna isär diagonalt, den övre handen flammar ut och upp medan kroppen öppnas brett.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/057.webp', audio: 'audio/057.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 16,
     },
     {
@@ -980,7 +980,7 @@ export const formData: FormData = {
         sv: 'Samla händerna framför bröstet med den främre hälen i marken, för att bygga pressande energi.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/058.webp', audio: 'audio/058.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 5,
     },
     {
@@ -996,7 +996,7 @@ export const formData: FormData = {
         sv: 'Lyft höger hand högt och sänk vänster hand lågt i en tom främre ställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/059.webp', audio: 'audio/059.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 6,
     },
     {
@@ -1012,7 +1012,7 @@ export const formData: FormData = {
         sv: 'Borsta knät för att avleda lågt medan motsatt handflata trycks framåt i en bågställning.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/060.webp', audio: 'audio/060.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 7,
     },
     {
@@ -1028,7 +1028,7 @@ export const formData: FormData = {
         sv: 'Böj framåt och stöt fingertopparna nedåt för att frigöra en gripen handled.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/061.webp', audio: 'audio/061.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 20,
     },
     {
@@ -1044,7 +1044,7 @@ export const formData: FormData = {
         sv: 'Res dig och sprid armarna som en öppnande solfjäder, ena handen över huvudet och den andra trycker framåt.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/062.webp', audio: 'audio/062.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 21,
     },
     {
@@ -1060,7 +1060,7 @@ export const formData: FormData = {
         sv: 'Snurra kroppen och knäpp baksidan av handen utåt, stöt sedan den öppna handflatan framåt som en ormtunga.',
       },
       tags: ['strike', 'transition'],
-      media: { image: 'img/063.webp', audio: 'audio/063.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1076,7 +1076,7 @@ export const formData: FormData = {
         sv: 'Avled och parera, kliv sedan in och leverera ett framåtriktat knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/064.webp', audio: 'audio/064.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -1092,7 +1092,7 @@ export const formData: FormData = {
         sv: 'Cykla genom avvärjning, tillbakarullning, press och tryck.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/065.webp', audio: 'audio/065.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -1108,7 +1108,7 @@ export const formData: FormData = {
         sv: 'Kroka den bakre handen och tryck den främre handflatan utåt till en vid bågställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/066.webp', audio: 'audio/066.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -1124,7 +1124,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna kontinuerligt medan du sidsteg, midjan vrider för att driva rörelsen.',
       },
       tags: ['cloud-hands', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/067.webp', audio: 'audio/067.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 26,
     },
     {
@@ -1140,7 +1140,7 @@ export const formData: FormData = {
         sv: 'Avsluta molnhänderna till ett piskslag, kroka den bakre handen och tryck den främre handflatan ut.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/068.webp', audio: 'audio/068.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -1156,7 +1156,7 @@ export const formData: FormData = {
         sv: 'Dra in den bakre foten och sträck ena handflatan framåt över den andra som för att klappa en hög häst.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/069.webp', audio: 'audio/069.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 28,
     },
     {
@@ -1172,7 +1172,7 @@ export const formData: FormData = {
         sv: 'Skjut en handflata framåt över den stödjande underarmen och sträck fingrarna mot motståndarens hals.',
       },
       tags: ['strike', 'hand-deflection'],
-      media: { image: 'img/070.webp', audio: 'audio/070.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1188,7 +1188,7 @@ export const formData: FormData = {
         sv: 'Vrid på stödbenet och driv höger häl framåt medan armarna öppnas.',
       },
       tags: ['kick', 'transition', 'repetitive'],
-      media: { image: 'img/071.webp', audio: 'audio/071.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 39,
     },
     {
@@ -1204,7 +1204,7 @@ export const formData: FormData = {
         sv: 'Kliv ned, borsta knät åt sidan och driv en låg knytnäve mot motståndarens nedre buk.',
       },
       tags: ['strike', 'hand-deflection'],
-      media: { image: 'img/072.webp', audio: 'audio/072.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1220,7 +1220,7 @@ export const formData: FormData = {
         sv: 'Cykla genom avvärjning, tillbakarullning, press och tryck för att samla energi.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/073.webp', audio: 'audio/073.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -1236,7 +1236,7 @@ export const formData: FormData = {
         sv: 'Kroka den bakre handen och tryck den främre handflatan utåt, öppna till ett piskslag.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/074.webp', audio: 'audio/074.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -1252,7 +1252,7 @@ export const formData: FormData = {
         sv: 'Sjunk ned i en djup låg huk och låt den främre handflatan glida ned längs det utsträckta benet.',
       },
       tags: ['stance', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/075.webp', audio: 'audio/075.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 53,
     },
     {
@@ -1268,7 +1268,7 @@ export const formData: FormData = {
         sv: 'Res dig från den låga ställningen och korsa båda nävarna framför bröstet med den främre foten på tårna.',
       },
       tags: ['strike', 'stance'],
-      media: { image: 'img/076.webp', audio: 'audio/076.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1284,7 +1284,7 @@ export const formData: FormData = {
         sv: 'Kliv bakåt och separera händerna, en stiger över huvudet och en sjunker lågt, med vikten bak i en tom ställning.',
       },
       tags: ['hand-deflection', 'stance'],
-      media: { image: 'img/077.webp', audio: 'audio/077.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1300,7 +1300,7 @@ export const formData: FormData = {
         sv: 'Snurra kroppen runt och svep höger fot i en vid utåtgående halvmåne, händerna klappar den stigande foten.',
       },
       tags: ['kick', 'transition'],
-      media: { image: 'img/078.webp', audio: 'audio/078.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1316,7 +1316,7 @@ export const formData: FormData = {
         sv: 'Sätt dig i en bågställning och dra båda nävarna över kroppen som om man spänner en båge, och slå sedan framåt.',
       },
       tags: ['strike', 'stance'],
-      media: { image: 'img/079.webp', audio: 'audio/079.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
     {
@@ -1332,7 +1332,7 @@ export const formData: FormData = {
         sv: 'Avled och parera, kliv sedan framåt och leverera ett knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/080.webp', audio: 'audio/080.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -1348,7 +1348,7 @@ export const formData: FormData = {
         sv: 'Korsa och separera handlederna, dra tillbaka och tryck sedan båda handflatorna framåt.',
       },
       tags: ['hand-deflection', 'opening-closing', 'repetitive'],
-      media: { image: 'img/081.webp', audio: 'audio/081.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 11,
     },
     {
@@ -1364,7 +1364,7 @@ export const formData: FormData = {
         sv: 'Vrid och för armarna korsade framför bröstet med jämn vikt, och samla mot avslutningen.',
       },
       tags: ['opening-closing', 'transition', 'repetitive'],
-      media: { image: 'img/082.webp', audio: 'audio/082.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 12,
     },
     {
@@ -1380,7 +1380,7 @@ export const formData: FormData = {
         sv: 'Vrid mot hörnet, borsta knät och tryck, och utför sedan en hörntillbakarullning och press.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/083.webp', audio: 'audio/083.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 13,
     },
     {
@@ -1396,7 +1396,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna och placera den bakre knytnäven under den främre armbågen i en tom ställning.',
       },
       tags: ['strike', 'stance', 'repetitive'],
-      media: { image: 'img/084.webp', audio: 'audio/084.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 14,
     },
     {
@@ -1412,7 +1412,7 @@ export const formData: FormData = {
         sv: 'Reträtt steg för steg, dra ena handflatan tillbaka medan den andra trycker framåt i brösthöjd.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/085.webp', audio: 'audio/085.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 15,
     },
     {
@@ -1428,7 +1428,7 @@ export const formData: FormData = {
         sv: 'Dela armarna isär diagonalt, den övre handen flammar upp medan kroppen öppnas brett.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/086.webp', audio: 'audio/086.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 16,
     },
     {
@@ -1444,7 +1444,7 @@ export const formData: FormData = {
         sv: 'Samla händerna framför bröstet med den främre hälen i marken, för att bygga pressande energi.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/087.webp', audio: 'audio/087.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 5,
     },
     {
@@ -1460,7 +1460,7 @@ export const formData: FormData = {
         sv: 'Lyft höger hand högt och sänk vänster hand lågt i en tom främre ställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/088.webp', audio: 'audio/088.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 6,
     },
     {
@@ -1476,7 +1476,7 @@ export const formData: FormData = {
         sv: 'Borsta knät för att avleda lågt medan motsatt handflata trycks framåt i en bågställning.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/089.webp', audio: 'audio/089.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 7,
     },
     {
@@ -1492,7 +1492,7 @@ export const formData: FormData = {
         sv: 'Böj framåt och stöt fingertopparna nedåt för att frigöra en gripen handled.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/090.webp', audio: 'audio/090.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 20,
     },
     {
@@ -1508,7 +1508,7 @@ export const formData: FormData = {
         sv: 'Res dig och sprid armarna som en solfjäder, ena handen över huvudet och den andra trycker framåt.',
       },
       tags: ['hand-deflection', 'strike', 'repetitive'],
-      media: { image: 'img/091.webp', audio: 'audio/091.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 21,
     },
     {
@@ -1524,7 +1524,7 @@ export const formData: FormData = {
         sv: 'Snurra kroppen och knäpp baksidan av handen utåt, stöt sedan den öppna handflatan framåt.',
       },
       tags: ['strike', 'transition', 'repetitive'],
-      media: { image: 'img/092.webp', audio: 'audio/092.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 63,
     },
     {
@@ -1540,7 +1540,7 @@ export const formData: FormData = {
         sv: 'Avled och parera, kliv sedan in och leverera ett framåtriktat knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/093.webp', audio: 'audio/093.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -1556,7 +1556,7 @@ export const formData: FormData = {
         sv: 'Cirkla händerna kontinuerligt medan du sidsteg, midjan driver rotationen.',
       },
       tags: ['cloud-hands', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/094.webp', audio: 'audio/094.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 26,
     },
     {
@@ -1572,7 +1572,7 @@ export const formData: FormData = {
         sv: 'Avsluta molnhänderna till ett piskslag, kroka den bakre handen och tryck den främre handflatan ut.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/095.webp', audio: 'audio/095.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -1588,7 +1588,7 @@ export const formData: FormData = {
         sv: 'Dra in den bakre foten och sträck ena handflatan framåt över den andra som för att klappa en hög häst.',
       },
       tags: ['hand-deflection', 'transition', 'repetitive'],
-      media: { image: 'img/096.webp', audio: 'audio/096.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 28,
     },
     {
@@ -1604,7 +1604,7 @@ export const formData: FormData = {
         sv: 'Skjut en handflata framåt över den stödjande underarmen och sträck fingrarna framåt.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/097.webp', audio: 'audio/097.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 70,
     },
     {
@@ -1620,7 +1620,7 @@ export const formData: FormData = {
         sv: 'Sjunk ned i en djup låg huk och låt den främre handflatan glida ned längs det utsträckta benet.',
       },
       tags: ['stance', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/098.webp', audio: 'audio/098.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 53,
     },
     {
@@ -1636,7 +1636,7 @@ export const formData: FormData = {
         sv: 'Res dig från den låga ställningen och korsa båda nävarna framför bröstet med den främre foten på tårna.',
       },
       tags: ['strike', 'stance', 'repetitive'],
-      media: { image: 'img/099.webp', audio: 'audio/099.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 76,
     },
     {
@@ -1652,7 +1652,7 @@ export const formData: FormData = {
         sv: 'Kliv bakåt och separera händerna, en stiger över huvudet och en sjunker lågt i en tom ställning.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/100.webp', audio: 'audio/100.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 77,
     },
     {
@@ -1668,7 +1668,7 @@ export const formData: FormData = {
         sv: 'Snurra kroppen runt och svep höger fot i en vid utåtgående halvmåne, händerna klappar foten.',
       },
       tags: ['kick', 'transition', 'repetitive'],
-      media: { image: 'img/101.webp', audio: 'audio/101.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 78,
     },
     {
@@ -1684,7 +1684,7 @@ export const formData: FormData = {
         sv: 'Sätt dig i en bågställning och dra båda nävarna över kroppen, och slå sedan framåt.',
       },
       tags: ['strike', 'stance', 'repetitive'],
-      media: { image: 'img/102.webp', audio: 'audio/102.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 79,
     },
     {
@@ -1700,7 +1700,7 @@ export const formData: FormData = {
         sv: 'Vänd dig om och sving baksidan av knytnäven utåt, och följ sedan med ett framåtriktat slag.',
       },
       tags: ['strike', 'transition', 'repetitive'],
-      media: { image: 'img/103.webp', audio: 'audio/103.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 22,
     },
     {
@@ -1716,7 +1716,7 @@ export const formData: FormData = {
         sv: 'Avled och parera, kliv sedan in och leverera ett sista framåtriktat knytnävsslag.',
       },
       tags: ['strike', 'hand-deflection', 'repetitive'],
-      media: { image: 'img/104.webp', audio: 'audio/104.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 10,
     },
     {
@@ -1732,7 +1732,7 @@ export const formData: FormData = {
         sv: 'Cykla en sista gång genom avvärjning, tillbakarullning, press och tryck.',
       },
       tags: ['hand-deflection', 'repetitive'],
-      media: { image: 'img/105.webp', audio: 'audio/105.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 3,
     },
     {
@@ -1748,7 +1748,7 @@ export const formData: FormData = {
         sv: 'Kroka den bakre handen och tryck den främre handflatan utåt till ett sista piskslag.',
       },
       tags: ['hand-deflection', 'stance', 'repetitive'],
-      media: { image: 'img/106.webp', audio: 'audio/106.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 4,
     },
     {
@@ -1764,7 +1764,7 @@ export const formData: FormData = {
         sv: 'Vrid och för armarna korsade framför bröstet med jämn vikt, och sätt dig mot avslutningen.',
       },
       tags: ['opening-closing', 'transition', 'repetitive'],
-      media: { image: 'img/107.webp', audio: 'audio/107.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: 12,
     },
     {
@@ -1780,7 +1780,7 @@ export const formData: FormData = {
         sv: 'Sänk händerna och tryck handflatorna mjukt nedåt, för fötterna samman igen och sinnet till stillhet.',
       },
       tags: ['opening-closing'],
-      media: { image: 'img/108.webp', audio: 'audio/108.m4a', video: null, rig: null },
+      media: { image: null, audio: null, video: null, rig: null },
       repeatOf: null,
     },
   ],
