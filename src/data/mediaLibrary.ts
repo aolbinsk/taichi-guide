@@ -290,54 +290,6 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   "弯弓射虎 / 收势": [ref("https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/", "#MartialMonday 4 – Bend the Bow to Shoot the Tiger", "taiji-forum.com", "© taiji-forum.com")],
 };
 // ---------------------------------------------------------------------------
-// Yang Chengfu form-chart clips. Cropped from a single CC BY 3.0 montage on
-// Wikimedia (File:Yang_Chengfu_Form.jpg, © Matthias Wagner) and SEQUENCE-MAPPED
-// to postures by form order, so each cell-to-posture assignment is APPROXIMATE
-// (captioned "position approx."). Kept separate and merged in lookupPostureMedia
-// so they augment existing per-posture media rather than replacing it.
-// ---------------------------------------------------------------------------
-const MONTAGE_IMAGES: Record<string, MediaSource> = {
-"预备势": img('/media/postures/yc-preparation-beginning.webp', "Preparation / Beginning — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "提手上势": img('/media/postures/yc-raise-hands-and-step-up.webp', "Raise Hands and Step Up — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "白鹤亮翅": img('/media/postures/yc-white-crane-spreads-its-wings.webp', "White Crane Spreads Its Wings — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "左搂膝拗步": img('/media/postures/yc-brush-knee-and-twist-step-left.webp', "Brush Knee and Twist Step (Left) — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "手挥琵琶": img('/media/postures/yc-hands-strum-the-lute.webp', "Hands Strum the Lute — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "搂膝拗步": img('/media/postures/yc-brush-knee-and-twist-step.webp', "Brush Knee and Twist Step — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "进步搬拦捶": img('/media/postures/yc-step-forward-deflect-parry-and-p.webp', "Step Forward, Deflect, Parry and Punch — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "如封似闭": img('/media/postures/yc-apparent-close-up-withdraw-and-p.webp', "Apparent Close-Up / Withdraw and Push — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "十字手": img('/media/postures/yc-cross-hands.webp', "Cross Hands — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "抱虎归山": img('/media/postures/yc-embrace-tiger-return-to-mountain.webp', "Embrace Tiger, Return to Mountain — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "肘底捶": img('/media/postures/yc-fist-under-elbow.webp', "Fist Under Elbow — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "倒撵猴": img('/media/postures/yc-step-back-and-repulse-the-monkey.webp', "Step Back and Repulse the Monkey — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "海底针": img('/media/postures/yc-needle-at-sea-bottom.webp', "Needle at Sea Bottom — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "扇通背": img('/media/postures/yc-fan-through-the-back.webp', "Fan Through the Back — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "撇身捶": img('/media/postures/yc-turn-body-chop-and-punch.webp', "Turn Body, Chop and Punch — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "云手": img('/media/postures/yc-cloud-hands.webp', "Cloud Hands — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "高探马": img('/media/postures/yc-high-pat-on-horse.webp', "High Pat on Horse — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "右分脚": img('/media/postures/yc-separate-right-foot.webp', "Separate Right Foot — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "左分脚": img('/media/postures/yc-separate-left-foot.webp', "Separate Left Foot — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "转身左蹬脚": img('/media/postures/yc-turn-and-kick-with-left-heel.webp', "Turn and Kick with Left Heel — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "左右搂膝拗步": img('/media/postures/yc-brush-knee-and-twist-step-left-a.webp', "Brush Knee and Twist Step (Left and Right) — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "进步栽捶": img('/media/postures/yc-step-forward-and-punch-down.webp', "Step Forward and Punch Down — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "右蹬脚": img('/media/postures/yc-kick-with-right-heel.webp', "Kick with Right Heel — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "双峰贯耳": img('/media/postures/yc-strike-opponent-s-ears-with-both.webp', "Strike Opponent’s Ears with Both Fists — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "转身右蹬脚": img('/media/postures/yc-turn-body-and-kick-with-right-he.webp', "Turn Body and Kick with Right Heel — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "野马分鬃": img('/media/postures/yc-partition-of-the-wild-horse-s-ma.webp', "Partition of the Wild Horse’s Mane — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "玉女穿梭": img('/media/postures/yc-fair-lady-works-the-shuttles.webp', "Fair Lady Works the Shuttles — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "右金鸡独立": img('/media/postures/yc-golden-rooster-stands-on-one-leg.webp', "Golden Rooster Stands on One Leg (Right) — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "左金鸡独立": img('/media/postures/yc-golden-rooster-stands-on-one-leg.webp', "Golden Rooster Stands on One Leg (Left) — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "转身白蛇吐信": img('/media/postures/yc-turn-body-white-snake-spits-out-.webp', "Turn Body, White Snake Spits Out Tongue — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "穿掌": img('/media/postures/yc-palm-thrust-cross-hands-and-thru.webp', "Palm Thrust / Cross Hands and Thrust Palm — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "搂膝指裆捶": img('/media/postures/yc-brush-knee-and-punch-opponent-s-.webp', "Brush Knee and Punch Opponent’s Groin — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "上步七星": img('/media/postures/yc-step-forward-to-seven-stars.webp', "Step Forward to Seven Stars — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "退步跨虎": img('/media/postures/yc-step-back-to-ride-the-tiger.webp', "Step Back to Ride the Tiger — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "转身摆莲": img('/media/postures/yc-turn-body-and-sweep-lotus.webp', "Turn Body and Sweep Lotus — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "弯弓射虎": img('/media/postures/yc-bend-the-bow-and-shoot-the-tiger.webp', "Bend the Bow and Shoot the Tiger — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-  "收势": img('/media/postures/yc-closing-of-tai-chi-return-to-ori.webp', "Closing of Tai Chi / Return to Origin — Yang Chengfu form chart (position approx.)", 'Matthias Wagner', 'commons.wikimedia.org', 'CC BY 3.0'),
-};
-
-
-// ---------------------------------------------------------------------------
 // Hanzi normalization: map directional / stepping variants of a posture onto a
 // single base key so e.g. 左右野马分鬃 / 左野马分鬃 / 右野马分鬃 all resolve to
 // 野马分鬃. We only strip a leading qualifier if the remainder is a key we
@@ -349,7 +301,7 @@ const PREFIXES = [
 ];
 
 function resolveKey(hanzi: string): string | null {
-  const has = (k: string) => k in POSTURE_MEDIA || k in MONTAGE_IMAGES;
+  const has = (k: string) => k in POSTURE_MEDIA;
   if (has(hanzi)) return hanzi;
   // Drop a trailing full-width parenthetical qualifier: 云手（左） → 云手.
   let s = hanzi.replace(/（[^）]*）/g, "");
@@ -373,11 +325,7 @@ function resolveKey(hanzi: string): string | null {
 
 function lookupPostureMedia(hanzi: string): MediaSource[] {
   const key = resolveKey(hanzi);
-  if (!key) return [];
-  // Image(s) first so attachMedia picks one as media.image and the gallery
-  // renders it above the reference links.
-  const montage = MONTAGE_IMAGES[key] ? [MONTAGE_IMAGES[key]] : [];
-  return [...montage, ...(POSTURE_MEDIA[key] ?? [])];
+  return key ? (POSTURE_MEDIA[key] ?? []) : [];
 }
 
 // Per-posture clip bounds from a single chaptered demo video. Embedded (never
