@@ -72,6 +72,11 @@ export const FORM_MEDIA: Record<string, MediaSource[]> = {
     yt('MJHqVSzURLE', 'Tai Chi Yang Style 108 Form Demo with 8 Technique Analysis', 'demo', 'Dr. Todd Martin'),
     yt('LmHZE5oklag', 'Yang Tai Chi 108 Form — Step-by-step Series (1/93)', 'instruction', null, 'First of a 93-part breakdown'),
   ],
+  yang_dong_fast: [
+    yt('mV2jH22D-I8', 'Master Tung Kai Ying — Dong Family Tai Chi Fast Form', 'demo', 'Tung Kai Ying 董繼英'),
+    yt('405khDybiQQ', 'Dong Family Fast Set 董氏快拳 — demonstration', 'demo', 'Dong Zengchen 董增辰 (Taichi Hawaii)'),
+    yt('mAmvStH5k4g', 'Yang Tai Chi Fast Form', 'demo', 'Jesse Tsao'),
+  ],
   chen18: [
     yt('1EEALpy2JOM', 'Chen Zhenglei 陳正雷 — Chen-Style Taijiquan Essential 18 Form 陳氏太極拳精要十八式', 'front', 'Chen Zhenglei 陳正雷'),
     yt('YtUqaedweSQ', 'Chen-style Tai Chi 18 Form 陈氏18式太极拳 — Beginner Front View', 'front', null),

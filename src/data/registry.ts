@@ -128,6 +128,18 @@ export const FORMS: FormMeta[] = [
     verified: false,
     load: () => import('./yang108').then((m) => m.formData),
   },
+  {
+    id: 'yang_dong_fast',
+    style: 'yang',
+    variant: { en: 'Dong Fast Form', sv: 'Dongs snabbform', zh_pinyin: 'Dǒngshì Kuàiquán', zh_hans: '董氏快拳' },
+    count: 31,
+    lineage: {
+      en: 'Tung/Dong family fast form (快架) by Dong Yingjie — fast companion to the Yang long form.',
+      sv: 'Tung/Dong-familjens snabbform (快架) av Dong Yingjie — snabb motsvarighet till Yangs långa form.',
+    },
+    verified: false,
+    load: () => import('./yang_dong_fast').then((m) => m.formData),
+  },
   // ---- Chen family ----
   {
     id: 'chen18',
