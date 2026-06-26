@@ -26,7 +26,8 @@ export default defineConfig({
       },
       workbox: {
         // Cache the app shell + all bundled data/media for full offline use.
-        globPatterns: ['**/*.{js,css,html,svg,png,webp,m4a,woff2}'],
+        // jpg/jpeg cover localized YouTube posters (public/media/thumbs/*.jpg).
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,jpeg,webp,m4a,woff2}'],
       },
     }),
   ],

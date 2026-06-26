@@ -3,6 +3,7 @@ import type { Posture } from '../types';
 import { useStore } from '../state/useStore';
 import { UI } from '../i18n/labels';
 import { speakMandarin, stopSpeaking, ttsAvailable } from '../lib/tts';
+import { MediaGallery } from './MediaGallery';
 
 interface Props {
   posture: Posture;
@@ -12,11 +13,14 @@ interface Props {
 function MediaPills({ posture, ttsOk }: Props & { ttsOk: boolean }) {
   const lang = useStore((s) => s.lang);
   const m = posture.media;
+  const sources = posture.sources ?? [];
+  const hasImage = !!m.image || sources.some((s) => s.kind === 'image');
+  const hasVideo = !!m.video || sources.some((s) => s.kind === 'video');
   const pills: { key: string; label: string; on: boolean }[] = [
     // Audio is available from a bundled recording or on-device Mandarin TTS.
     { key: 'audio', label: UI[lang].media.audio, on: !!m.audio || ttsOk },
-    { key: 'image', label: UI[lang].media.image, on: !!m.image },
-    { key: 'video', label: UI[lang].media.video, on: !!m.video },
+    { key: 'image', label: UI[lang].media.image, on: hasImage },
+    { key: 'video', label: UI[lang].media.video, on: hasVideo },
     { key: 'rig', label: UI[lang].media.rig, on: !!m.rig },
   ];
   return (
@@ -130,21 +134,7 @@ export function PostureCard({ posture }: Props) {
 
       {expanded && (
         <div className="card__body">
-          <div className="card__media">
-            {posture.media.image ? (
-              <img
-                className="card__img"
-                src={posture.media.image}
-                alt={posture.names[lang]}
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <div className="card__img card__img--placeholder" aria-hidden="true">
-                ☯
-              </div>
-            )}
-          </div>
+          <MediaGallery sources={posture.sources ?? []} alt={posture.names[lang]} />
           <p className="card__desc">{posture.description[lang]}</p>
           <div className="card__actions">
             <button
@@ -154,10 +144,6 @@ export function PostureCard({ posture }: Props) {
             >
               ▶ {t.playAudio}
             </button>
-            {/* Phase 3 placeholder: inline video / 3D rig slot */}
-            <div className="card__future-slot" aria-hidden="true">
-              {t.media.video} · {t.media.rig}
-            </div>
           </div>
         </div>
       )}
