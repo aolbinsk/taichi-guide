@@ -37,9 +37,12 @@ video thumbnails play inline on tap; reference pages render as link chips.
 - **14/14 forms** have routine videos (multiple camera angles for all but Wu/Hao).
 - **64 / 191 unique postures** (~52% of all posture instances) have a dedicated
   per-posture reference page; the rest fall back to their form's routine videos.
-- These numbers are intentionally honest — the sandbox that gathered them has no
-  open internet egress, so assets are *referenced and attributed*, not downloaded.
-  See **Offline localization** to pull copies down on a connected machine.
+- **Localized for offline use:** a download-capable session has since pulled the
+  52 routine-video poster thumbnails (`public/media/thumbs/`) and 4 free-licensed
+  posture stills (`public/media/postures/`) into the repo, so posters and those
+  images render without a connection. The reference *pages* and *video playback*
+  still need the network (links, not re-hosted). See **Self-hosted images** below
+  and **Offline localization** for how this was done.
 
 ---
 
@@ -136,7 +139,7 @@ Keyed by hanzi; reused across every form containing the posture. © respective s
 |---|---|---|---|
 | 白鹤亮翅 | White Crane Spreads Its Wings | everydaytaichi.org | https://www.everydaytaichi.org/white-crane-spreads-its-wings1.html |
 | 单鞭 | Single Whip | everydaytaichi.org | https://www.everydaytaichi.org/single-whip.html |
-| 单鞭 | Single Whip (Yang Chengfu application) | commons.wikimedia.org | https://commons.wikimedia.org/wiki/File:Yang_cheng_fu_single_whip_application_2_75.jpg |
+| 单鞭 | Single Whip (Yang Chengfu application) — **now self-hosted**, see [Self-hosted images](#self-hosted-images-public-domain--cc) | commons.wikimedia.org | https://commons.wikimedia.org/wiki/File:Yang_cheng_fu_single_whip_application_2_75.jpg |
 | 高探马 | High Pat on Horse | everydaytaichi.org | http://www.everydaytaichi.org/high-pat-on-the-horse-kick-out-right.html |
 | 高探马 | High Pat on Horse (front & back) | everydaytaichi.org | http://www.everydaytaichi.org/single-whip-high-pat-on-horse-kick-outs-double-punch-front-back-view.html |
 | 云手 | Cloud Hands | everydaytaichi.org | https://www.everydaytaichi.org/cloud-hands.html |
@@ -171,6 +174,30 @@ Keyed by hanzi; reused across every form containing the posture. © respective s
 | 下势 | Snake Creeps Down | chandao.co.uk | https://www.chandao.co.uk/taijiquan-snake-creeps-down.html |
 | 掤捋挤按 | Four energies (Peng Lü Ji An) | thetaichinotebook.com | https://thetaichinotebook.com/2015/09/10/peng-lu-ji-an-grasping-the-birds-tail/ |
 | 掤捋挤按 | Thirteen Postures / Eight Gates | egreenway.com | https://www.egreenway.com/taichichuan/powers13.htm |
+
+---
+
+## Self-hosted images (public-domain / CC)
+
+Downloaded from Wikimedia Commons, resized to ≤800 px WebP, and committed under
+`public/media/postures/`. These render **inline and offline** (`kind:'image'` in
+`mediaLibrary.ts`). Only public-domain or Creative-Commons files are self-hosted;
+each is captioned in-app with its author + license. Verify each licence on its
+Commons file page before any redistribution beyond private study.
+
+| Hanzi | Posture | Local file | License | Author / credit | Commons file page |
+|---|---|---|---|---|---|
+| 单鞭 | Single Whip (Yang Chengfu application) | `single-whip.webp` | Public domain | Yang Chengfu, via chipellis.com | https://commons.wikimedia.org/wiki/File:Yang_cheng_fu_single_whip_application_2_75.jpg |
+| 起势 | Commencement of Taiji | `commencing.webp` | Public domain | Dong Yingjie 董英杰, via chipellis.com | https://commons.wikimedia.org/wiki/File:DYJ_Commencement_of_Taiji.jpg |
+| 揽雀尾 | Grasp Bird's Tail (Eddie Wu, 1998) | `grasp-birds-tail.webp` | Public domain | Bradeos Graphon (uploader) | https://commons.wikimedia.org/wiki/File:Eddie_Wu_Grasp_Bird%27s_Tail_1998.jpg |
+| 斜飞势 | Cross Step Slant / Diagonal Flying (Gary Wragg) | `diagonal-flying.webp` | CC BY-SA 4.0 | Ronnie Robinson | https://commons.wikimedia.org/wiki/File:Gary_Wragg_performs_Cross_Step_Slant_Flying.jpg |
+
+> Commons has surprisingly few free **posture-demonstration** stills: most of
+> `Category:Tai Chi Chuan Masters` is historical portraits and most of
+> `Category:TaiChi Single Whip` is photos of the Ju Ming *sculpture*. The four
+> above are the clean, clearly-licensed, genuinely-illustrative ones found.
+> GFDL-only images (e.g. Master Yang Jun's Golden Rooster / Bend Bow) were
+> deliberately **not** inlined — GFDL requires shipping the full licence text.
 
 ---
 

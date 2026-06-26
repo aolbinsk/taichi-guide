@@ -142,11 +142,28 @@ function ref(
   return { kind: 'page', url, title, author: null, source, license, note };
 }
 
+// A self-hosted still image, rendered inline as an <img>. ONLY use for genuinely
+// free assets (public-domain / Creative Commons) — the gallery shows the author +
+// license caption. `url` is an app-bundled path under public/media/postures/
+// (resolved against the deploy base at render time). Provenance + exact license +
+// original file URL are recorded in RESOURCES.md. Localized with
+// `scripts/localize-media.mjs` (thumbnails) / manual Commons download (these).
+function img(
+  url: string,
+  title: string,
+  author: string | null,
+  source: string,
+  license: string,
+  note?: string,
+): MediaSource {
+  return { kind: 'image', url, title, author, source, license, note };
+}
+
 export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   白鹤亮翅: [ref('https://www.everydaytaichi.org/white-crane-spreads-its-wings1.html', 'White Crane Spreads its Wings', 'everydaytaichi.org', '© everydaytaichi.org', 'Per-posture page with photos')],
   单鞭: [
+    img('/media/postures/single-whip.webp', 'Yang Chengfu — Single Whip application', 'Yang Chengfu (via chipellis.com)', 'commons.wikimedia.org', 'Public domain', 'Historical application photograph'),
     ref('https://www.everydaytaichi.org/single-whip.html', 'Single Whip', 'everydaytaichi.org', '© everydaytaichi.org', 'Hand/foot positioning photos'),
-    ref('https://commons.wikimedia.org/wiki/File:Yang_cheng_fu_single_whip_application_2_75.jpg', 'Yang Chengfu — Single Whip application', 'commons.wikimedia.org', 'Check file page (likely public domain)', 'Yang Chengfu reference photo'),
   ],
   高探马: [
     ref('http://www.everydaytaichi.org/high-pat-on-the-horse-kick-out-right.html', 'High Pat on the Horse, Kick Out Right', 'everydaytaichi.org', '© everydaytaichi.org'),
@@ -164,6 +181,7 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   双峰贯耳: [ref('http://www.everydaytaichi.org/single-whip-high-pat-on-horse-kick-outs-double-punch-front-back-view.html', 'Strike Ears with Both Fists (double punch) — Front & Back', 'everydaytaichi.org', '© everydaytaichi.org')],
   手挥琵琶: [ref('http://www.everydaytaichi.org/playing-the-lute1.html', 'Playing the Lute', 'everydaytaichi.org', '© everydaytaichi.org')],
   起势: [
+    img('/media/postures/commencing.webp', 'Dong Yingjie — Commencement of Taiji', 'Dong Yingjie 董英杰 (via chipellis.com)', 'commons.wikimedia.org', 'Public domain', 'Opening posture, historical photograph'),
     ref('https://www.egreenway.com/taichichuan/TY1.htm', 'Opening Posture of Taijiquan (Green Way Research)', 'egreenway.com', '© Michael Garofalo', 'Illustrated per-posture page'),
     ref('https://www.everydaytaichi.org/commencing-form-part-horses-mane.html', 'Commencing Form', 'everydaytaichi.org', '© everydaytaichi.org'),
   ],
@@ -178,12 +196,16 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   肘底捶: [ref('https://thetaichinotebook.com/2017/03/02/fist-under-elbow-and-natural-posture/', 'Fist Under Elbow', 'thetaichinotebook.com', '© The Tai Chi Notebook')],
   野马分鬃: [ref('https://www.everydaytaichi.org/commencing-form-part-horses-mane.html', "Part the Wild Horse's Mane", 'everydaytaichi.org', '© everydaytaichi.org')],
   揽雀尾: [
+    img("/media/postures/grasp-birds-tail.webp", "Eddie Wu — Grasp Bird's Tail (1998)", 'Bradeos Graphon', 'commons.wikimedia.org', 'Public domain'),
     ref('https://www.everydaytaichi.org/grasping-the-birds-tail1.html', "Grasping the Bird's Tail", 'everydaytaichi.org', '© everydaytaichi.org'),
     ref('https://www.egreenway.com/taichichuan/gtst.htm', "Grasping the Sparrow's Tail (Green Way Research)", 'egreenway.com', '© Michael Garofalo', 'Photographs of Peng/Lu/Ji/An positions'),
   ],
   抱虎归山: [ref('https://balancedlifetaichi.com/blog/what-is-embrace-tiger-return-to-mountain-yang-all-about', 'Embrace Tiger, Return to Mountain', 'balancedlifetaichi.com', '© Balanced Life Tai Chi', 'References Yang Chengfu 1931 imagery')],
   扇通背: [ref('https://www.egreenway.com/taichichuan/longyang.htm', 'Fan Through the Back (Yang long-form reference)', 'egreenway.com', '© Michael Garofalo')],
-  斜飞势: [ref('https://www.egreenway.com/taichichuan/yangn1.htm', 'Diagonal Flying (Notes on Yang Style)', 'egreenway.com', '© Michael Garofalo')],
+  斜飞势: [
+    img('/media/postures/diagonal-flying.webp', 'Gary Wragg performs Cross Step Slant Flying', 'Ronnie Robinson', 'commons.wikimedia.org', 'CC BY-SA 4.0'),
+    ref('https://www.egreenway.com/taichichuan/yangn1.htm', 'Diagonal Flying (Notes on Yang Style)', 'egreenway.com', '© Michael Garofalo'),
+  ],
   六封四闭: [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Six-Sealing-and-Four-Closing-in-form-of-Chen-Style-Taiji.shtml", 'Six Sealing and Four Closing (Chen, illustrated)', 'tcmwindow.com', '© tcmwindow.com', 'Illustrated Chen-style page')],
   金刚捣碓: [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Buddha's-Warrior-Attendant-Pounds-Mortar-in-Chen-Style-Taiji.shtml", "Buddha's Warrior Attendant Pounds Mortar (Chen, illustrated)", 'tcmwindow.com', '© tcmwindow.com')],
   掩手肱拳: [
