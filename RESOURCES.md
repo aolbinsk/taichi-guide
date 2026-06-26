@@ -35,10 +35,12 @@ video thumbnails play inline on tap; reference pages render as link chips.
 ### Coverage
 
 - **14/14 forms** have routine videos (multiple camera angles for all but Wu/Hao).
-- **64 / 191 unique postures** (~52% of all posture instances) have a dedicated
-  per-posture reference page; the rest fall back to their form's routine videos.
+- **125 / 191 unique postures** (~65%) now have dedicated per-posture media (a
+  reference page and/or a self-hosted image); the rest fall back to their form's
+  routine videos. (Up from 64 after the Phase E research pass — see
+  `MEDIA_DOWNLOAD_PLAN.md`.)
 - **Localized for offline use:** a download-capable session has since pulled the
-  52 routine-video poster thumbnails (`public/media/thumbs/`) and 4 free-licensed
+  52 routine-video poster thumbnails (`public/media/thumbs/`) and 6 free-licensed
   posture stills (`public/media/postures/`) into the repo, so posters and those
   images render without a connection. The reference *pages* and *video playback*
   still need the network (links, not re-hosted). See **Self-hosted images** below
@@ -175,6 +177,66 @@ Keyed by hanzi; reused across every form containing the posture. © respective s
 | 掤捋挤按 | Four energies (Peng Lü Ji An) | thetaichinotebook.com | https://thetaichinotebook.com/2015/09/10/peng-lu-ji-an-grasping-the-birds-tail/ |
 | 掤捋挤按 | Thirteen Postures / Eight Gates | egreenway.com | https://www.egreenway.com/taichichuan/powers13.htm |
 
+### Phase E additions (expanded coverage — researched, then link-verified)
+
+Keyed by hanzi; one verified reference page per posture (liveness-checked). Two of
+these postures also gained a free self-hosted image (see the table above). © each site.
+
+| Hanzi | Posture | Source | URL |
+|---|---|---|---|
+| 开手 | Open Hands | balancedlifetaichi.com | https://balancedlifetaichi.com/blog/what-is-character-is-the-he-in-the-concept-of-kai-he-open-close |
+| 合手 | Close Hands | balancedlifetaichi.com | https://balancedlifetaichi.com/blog/what-is-character-is-the-he-in-the-concept-of-kai-he-open-close |
+| 撇身捶 | Punch of Draping Over the Body | practicalmethod.com | https://practicalmethod.com/2017/07/fist-draping-over-body-pi-shen-chui-and-lean-with-back-bei-zhe-kao-toronto-north-york-taiji-class-on-july-13-2017/ |
+| 弯弓射虎 | Draw the Bow to Shoot the Tiger | taiji-forum.com | https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/ |
+| 退步跨虎 | Step Back to Ride the Tiger | thetaichinotebook.com | https://thetaichinotebook.com/2024/04/04/retreat-to-ride-tiger/ |
+| 懒扎衣 | Lazily Tying the Coat | tcmwindow.com | http://www.tcmwindow.com/taiji/Illustrations/movements/Lazy-About-Tying-Coat-in-form-of-Chen-Style-Taiji.shtml |
+| 玉女穿梭 | Jade Maiden Works the Shuttles | tcmwindow.com | http://www.tcmwindow.com/taiji/Illustrations/movements/Jade-Girl-Works-at-Shuttles-in-form-of-Chen-Style-Taiji.shtml |
+| 右蹬脚 | Heel Kick — Right | nwfighting.com | https://nwfighting.com/yang-24-form-tai-chi-movement-kick-right-heel/ |
+| 右分脚 | Right Pat the Foot | sanctuaryoftao.org | https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/ |
+| 单鞭下势 | Single Whip — Low Posture | nwfighting.com | https://nwfighting.com/yang-24-form-tai-chi-movement-dragon-waves-tail/ |
+| 左分脚 | Left Pat the Foot | sanctuaryoftao.org | https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/ |
+| 转身白蛇吐信 | Turn Body, White Snake Spits Out Tongue | thetaichinotebook.com | https://thetaichinotebook.com/2024/01/20/tai-chi-applications-needle-at-sea-bottom-fan-through-back-white-snake-spits-out-tongue-torso-flung-punch/ |
+| 左蹬脚 | Left Heel Kick | everydaytaichi.org | http://www.everydaytaichi.org/single-whip-high-pat-on-horse-kick-outs-double-punch-front-back-view.html |
+| 闪通臂 | Flashing Arms (Open the Fan) | kitrain.com | https://kitrain.com/courses/tai-chi-yang-24/lessons/16-fan-through-the-back/ |
+| 青龙出水 | Green Dragon Comes Out of Water | bigbangtaiji.wordpress.com | https://bigbangtaiji.wordpress.com/2015/04/02/green-dragon-emerges-from-water/ |
+| 斜行拗步 | Walk Obliquely & Twist Step | thetaichinotebook.com | https://thetaichinotebook.com/2019/03/25/brush-knee-twist-step-tai-chi-application-and-style-comparison/ |
+| 预备势 | Preparing Form | yorkshiretaichi.uk | https://yorkshiretaichi.uk/fastform1-preparation-form/ |
+| 搂膝 | Brush Knee | practicalmethod.com | https://practicalmethod.com/2017/03/brush-the-knee-in-oblique-stance-lou-xi-ao-bu-toronto-north-york-taiji-class-on-march-24-2017/ |
+| 双推手 | Push With Both Hands | practicalmethod.com | https://practicalmethod.com/2007/03/yilu-18-step-forward-and-double-handed-push/ |
+| 翻身二起脚 | Turn Over and Double Kick | practicalmethod.com | https://practicalmethod.com/2007/03/yilu-36-turn-over-body-and-double-kick-er-qi-jiao/ |
+| 捋挤式 | Drawing the Bow to Shoot the Tiger | taiji-forum.com | https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/ |
+| 抱虎推山 | Embrace Tiger, Return to Mountain | balancedlifetaichi.com | https://balancedlifetaichi.com/blog/what-is-embrace-tiger-return-to-mountain-yang-all-about |
+| 肘底看捶 | Fist Under Elbow | thetaichinotebook.com | https://thetaichinotebook.com/2017/03/02/fist-under-elbow-and-natural-posture/ |
+| 左打虎势 | Strike Tiger — Left | discuss.yangfamilytaichi.com | http://discuss.yangfamilytaichi.com/viewtopic.php?t=840 |
+| 右打虎势 | Strike Tiger — Right | discuss.yangfamilytaichi.com | http://discuss.yangfamilytaichi.com/viewtopic.php?t=840 |
+| 左右穿梭 | Fair Lady Works the Shuttles (Left & Right) | blackwatertaichi.com | https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners |
+| 转身摆莲脚 | Turn and Sweep Lotus Kick | egreenway.com | https://www.egreenway.com/taichichuan/sun73.htm |
+| 云手（向右） | Wave Hands Like Clouds (to the Right) | earthbalance-taichi.com | https://earthbalance-taichi.com/2013/10/chen-taiji-cloud-hands/ |
+| 云手（快步） | Wave Hands Like Clouds (with Quick Steps) | earthbalance-taichi.com | https://earthbalance-taichi.com/2013/10/chen-taiji-cloud-hands/ |
+| 金刚捣碓、收势 | Buddha’s Warrior Attendant Pounds the Mortar & Closing Form | chenscotland.wordpress.com | https://chenscotland.wordpress.com/2010/09/22/what-is-a-jin-gang/ |
+| 铺地锦 | Earth Dragon (Snake Creeps Down) | taijiworld.com | https://www.taijiworld.com/tai-chi-posture.html |
+| 下步跨虎 | Step Back to Ride the Tiger | thetaichinotebook.com | https://thetaichinotebook.com/2024/04/04/retreat-to-ride-tiger/ |
+| 提手 | Pat the Horse and Thrust the Palm | classicaltaichi.blogspot.com | https://classicaltaichi.blogspot.com/2011/05/ti-shou-shang-shi-2-raise-hands.html |
+| 左右玉女穿梭 | Fair Lady Works the Shuttles (Left & Right) | everydaytaichi.org | https://www.everydaytaichi.org/maiden-working-the-shuttles.html |
+| 斜飞式 | Double Pushing Hands | sam-ma.com | https://www.sam-ma.com/blog/tai-chi-long-form-diagonal-flying |
+| 如封似闭·收势 | Apparent Close Up & Closing Form | everydaytaichi.org | https://www.everydaytaichi.org/apparent-closing.html |
+| 右起脚 | Right Separation Kick | egreenway.com | https://www.egreenway.com/taichichuan/sun73.htm |
+| 左起脚 | Left Separation Kick | egreenway.com | https://www.egreenway.com/taichichuan/sun73.htm |
+| 翻身二起 | Turn Over Body and Strike | egreenway.com | https://www.egreenway.com/taichichuan/sun73.htm |
+| 玉女穿梭（一） | Jade Lady Works the Shuttles (Part 1) | blackwatertaichi.com | https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners |
+| 玉女穿梭（二） | Jade Lady Works the Shuttles (Part 2) | blackwatertaichi.com | https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners |
+| 玉女穿梭（三） | Jade Lady Works the Shuttles (Part 3) | blackwatertaichi.com | https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners |
+| 玉女穿梭（四） | Jade Lady Works the Shuttles (Part 4) | balancedlifetaichi.com | https://balancedlifetaichi.com/blog/fair-lady-works-shuttles-yang-style-tai-chi |
+| 横单鞭 | Horizontal Single Whip | thetaichinotebook.com | https://thetaichinotebook.com/2011/06/03/single-whip-dan-bian/ |
+| 左右揽扎衣 | Lazily Tying the Coat (Left & Right) | tcmwindow.com | http://www.tcmwindow.com/taiji/Illustrations/movements/Lazy-About-Tying-Coat-in-form-of-Chen-Style-Taiji.shtml |
+| 左右分脚 | Separate Feet (Left & Right) | portal.sanctuaryoftao.org | https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/ |
+| 预备起势 | Preparation and Beginning | egreenway.com | https://www.egreenway.com/taichichuan/TY1.htm |
+| 左下势独立 | Snake Creeps Down & Golden Rooster — Left | everydaytaichi.org | https://www.everydaytaichi.org/serpent-in-the-grass-golden-cockerel.html |
+| 十字手收势 | Cross Hands & Closing Form | everydaytaichi.org | http://www.everydaytaichi.org/cross-hands.html |
+| 预备势 / 起势 | Preparation / Beginning | egreenway.com | https://www.egreenway.com/taichichuan/TY1.htm |
+| 回身右蹬脚 | Kick with Right Heel | nwfighting.com | https://nwfighting.com/yang-24-form-tai-chi-movement-kick-right-heel/ |
+| 弯弓射虎 / 收势 | Draw the Bow to Shoot the Tiger / Closing | taiji-forum.com | https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/ |
+
 ---
 
 ## Self-hosted images (public-domain / CC)
@@ -191,6 +253,8 @@ Commons file page before any redistribution beyond private study.
 | 起势 | Commencement of Taiji | `commencing.webp` | Public domain | Dong Yingjie 董英杰, via chipellis.com | https://commons.wikimedia.org/wiki/File:DYJ_Commencement_of_Taiji.jpg |
 | 揽雀尾 | Grasp Bird's Tail (Eddie Wu, 1998) | `grasp-birds-tail.webp` | Public domain | Bradeos Graphon (uploader) | https://commons.wikimedia.org/wiki/File:Eddie_Wu_Grasp_Bird%27s_Tail_1998.jpg |
 | 斜飞势 | Cross Step Slant / Diagonal Flying (Gary Wragg) | `diagonal-flying.webp` | CC BY-SA 4.0 | Ronnie Robinson | https://commons.wikimedia.org/wiki/File:Gary_Wragg_performs_Cross_Step_Slant_Flying.jpg |
+| 单鞭下势 | Single Whip — Low Posture | `single-whip-low.webp` | CC BY-SA 4.0 | Yanira Masich | https://commons.wikimedia.org/wiki/File:Serpiente_se_arrastra.jpg |
+| 铺地锦 | Earth Dragon (Snake Creeps Down) | `spread-brocade-ground.webp` | Public domain | Clftruthseeking | https://commons.wikimedia.org/wiki/File:Dfw_snake_creaps.jpg |
 
 > Commons has surprisingly few free **posture-demonstration** stills: most of
 > `Category:Tai Chi Chuan Masters` is historical portraits and most of

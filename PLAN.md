@@ -80,8 +80,11 @@ offline after — including localized video posters and self-hosted posture imag
       hanzi-keyed library (`data/mediaLibrary.ts`), attributed in `RESOURCES.md`.
 - [x] **Media localization pass** (`MEDIA_DOWNLOAD_PLAN.md`): verified every
       catalogued link (`scripts/check-links.mjs`; replaced 2 dead Yang-40 videos),
-      localized all 52 video poster thumbnails, and self-hosted 4 free-licensed
+      localized all 52 video poster thumbnails, and self-hosted 6 free-licensed
       (PD/CC) posture images — all precached for offline use.
+- [x] **Coverage expansion pass** (Phase E): researched 124 uncovered postures,
+      then link-verified; per-posture media coverage now **125 / 191** unique
+      postures (was 64). New entries + provenance recorded in `RESOURCES.md`.
 - [x] App icons (192/512 PNG) for installability.
 
 ### Phase 2 — Structural expansion

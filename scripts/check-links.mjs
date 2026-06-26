@@ -20,10 +20,15 @@ const lib = await readFile(libPath, 'utf8');
 // YouTube ids passed to yt('<id>', …).
 const ytIds = [...new Set([...lib.matchAll(/\byt\(\s*'([\w-]{11})'/g)].map((m) => m[1]))];
 // Every other URL string literal (ref pages, wikimedia File: links, images).
-const urls = [...new Set([...lib.matchAll(/'(https?:\/\/[^']+)'/g)].map((m) => m[1]))]
+// Match both quote styles; capture up to the *matching* closing quote so URLs
+// that contain the other quote char (e.g. a tcmwindow path with an apostrophe)
+// aren't truncated.
+const urls = [...new Set([...lib.matchAll(/(['"])(https?:\/\/.*?)\1/g)].map((m) => m[2]))]
   .filter((u) => !u.includes('youtube.com/watch') && !u.includes('youtu.be/'));
 
-const UA = 'Mozilla/5.0 (compatible; FormScrubLinkCheck/1.0)';
+// Full browser UA — some hosts (Cloudflare/fandom, sanctuaryoftao) 403 bot-like
+// UAs while serving real browsers fine; this avoids false negatives.
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 const timeout = (ms) => {
   const c = new AbortController();
   const t = setTimeout(() => c.abort(), ms);

@@ -223,6 +223,66 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
   捋: [ref('https://thetaichinotebook.com/2015/09/10/peng-lu-ji-an-grasping-the-birds-tail/', "Peng, Lu, Ji, An — Grasping the Bird's Tail", 'thetaichinotebook.com', '© The Tai Chi Notebook')],
   挤: [ref('https://thetaichinotebook.com/2015/09/10/peng-lu-ji-an-grasping-the-birds-tail/', "Peng, Lu, Ji, An — Grasping the Bird's Tail", 'thetaichinotebook.com', '© The Tai Chi Notebook')],
   按: [ref('https://www.egreenway.com/taichichuan/powers13.htm', 'Thirteen Postures / Eight Gates (Peng Lu Ji An …)', 'egreenway.com', '© Michael Garofalo')],
+  // --- Phase E: expanded coverage (researched, then verified for liveness +
+  // license). Pages are reference articles; the 2 images are free (PD/CC). ---
+  "开手": [ref("https://balancedlifetaichi.com/blog/what-is-character-is-the-he-in-the-concept-of-kai-he-open-close", "The Concept of \"Kai He\" (Open/Close) in Tai Chi", "balancedlifetaichi.com", "© balancedlifetaichi.com")],
+  "合手": [ref("https://balancedlifetaichi.com/blog/what-is-character-is-the-he-in-the-concept-of-kai-he-open-close", "The Concept of \"Kai He\" (Open/Close) in Tai Chi", "balancedlifetaichi.com", "© balancedlifetaichi.com")],
+  "撇身捶": [ref("https://practicalmethod.com/2017/07/fist-draping-over-body-pi-shen-chui-and-lean-with-back-bei-zhe-kao-toronto-north-york-taiji-class-on-july-13-2017/", "Fist Draping Over Body (Pi Shen Chui) and Lean with Back (Bei Zhe Kao)", "practicalmethod.com", "© practicalmethod.com")],
+  "弯弓射虎": [ref("https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/", "#MartialMonday 4 - Bend the Bow to Shoot the Tiger", "taiji-forum.com", "© taiji-forum.com")],
+  "退步跨虎": [ref("https://thetaichinotebook.com/2024/04/04/retreat-to-ride-tiger/", "Retreat to Ride Tiger", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "懒扎衣": [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Lazy-About-Tying-Coat-in-form-of-Chen-Style-Taiji.shtml", "Lazy About Tying Coat in form of Chen Style Taiji (with image)", "tcmwindow.com", "© tcmwindow.com")],
+  "玉女穿梭": [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Jade-Girl-Works-at-Shuttles-in-form-of-Chen-Style-Taiji.shtml", "Jade Girl Works at Shuttles in form of Chen Style Taiji (with image)", "tcmwindow.com", "© tcmwindow.com")],
+  "右蹬脚": [ref("https://nwfighting.com/yang-24-form-tai-chi-movement-kick-right-heel/", "Yang 24 Form – Tai Chi Movement: Kick With Right Heel", "nwfighting.com", "© nwfighting.com")],
+  "右分脚": [ref("https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/", "Separate Foot, Left and Right", "sanctuaryoftao.org", "© sanctuaryoftao.org")],
+  "单鞭下势": [
+    img('/media/postures/single-whip-low.webp', "Single Whip — Low Posture — Serpiente se arrastra", "Yanira Masich", 'commons.wikimedia.org', "CC BY-SA 4.0"),
+    ref("https://nwfighting.com/yang-24-form-tai-chi-movement-dragon-waves-tail/", "Yang 24 Form – Tai Chi Movement: Dragon Waves It's Tail (Snake Creeps Down / Single Whip Low Posture)", "nwfighting.com", "© nwfighting.com"),
+  ],
+  "左分脚": [ref("https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/", "Separate Foot, Left and Right", "sanctuaryoftao.org", "© sanctuaryoftao.org")],
+  "转身白蛇吐信": [ref("https://thetaichinotebook.com/2024/01/20/tai-chi-applications-needle-at-sea-bottom-fan-through-back-white-snake-spits-out-tongue-torso-flung-punch/", "Tai Chi Applications: Needle at Sea Bottom, Fan through back, White Snake Spits out Tongue + Torso-Flung punch", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "左蹬脚": [ref("http://www.everydaytaichi.org/single-whip-high-pat-on-horse-kick-outs-double-punch-front-back-view.html", "Single Whip, High Pat on Horse, Kick Outs, Double Punch (Front/Back View)", "everydaytaichi.org", "© everydaytaichi.org")],
+  "闪通臂": [ref("https://kitrain.com/courses/tai-chi-yang-24/lessons/16-fan-through-the-back/", "16. Fan Through the Back", "kitrain.com", "© kitrain.com")],
+  "青龙出水": [ref("https://bigbangtaiji.wordpress.com/2015/04/02/green-dragon-emerges-from-water/", "Green Dragon Emerges From Water (Qing Long Chu Shui)", "bigbangtaiji.wordpress.com", "© bigbangtaiji.wordpress.com")],
+  "斜行拗步": [ref("https://thetaichinotebook.com/2019/03/25/brush-knee-twist-step-tai-chi-application-and-style-comparison/", "Brush Knee Twist Step: Tai Chi application and style comparison", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "预备势": [ref("https://yorkshiretaichi.uk/fastform1-preparation-form/", "Preparation Form, 预备式, yu bei shi (Wu style fast form)", "yorkshiretaichi.uk", "© yorkshiretaichi.uk")],
+  "搂膝": [ref("https://practicalmethod.com/2017/03/brush-the-knee-in-oblique-stance-lou-xi-ao-bu-toronto-north-york-taiji-class-on-march-24-2017/", "Brush the Knee in Oblique Stance (Lou Xi Ao Bu) - Practical Method class notes", "practicalmethod.com", "© practicalmethod.com")],
+  "双推手": [ref("https://practicalmethod.com/2007/03/yilu-18-step-forward-and-double-handed-push/", "Yilu 18. Step Forward and Double-Handed Push", "practicalmethod.com", "© practicalmethod.com")],
+  "翻身二起脚": [ref("https://practicalmethod.com/2007/03/yilu-36-turn-over-body-and-double-kick-er-qi-jiao/", "Yilu: 36. Turn Over Body and Double Kick (Er Qi Jiao)", "practicalmethod.com", "© practicalmethod.com")],
+  "捋挤式": [ref("https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/", "#MartialMonday 4 – Bend the Bow to Shoot the Tiger", "taiji-forum.com", "© taiji-forum.com")],
+  "抱虎推山": [ref("https://balancedlifetaichi.com/blog/what-is-embrace-tiger-return-to-mountain-yang-all-about", "What is Embrace Tiger Return to Mountain (Yang) All About? - Balanced Life Tai Chi", "balancedlifetaichi.com", "© balancedlifetaichi.com")],
+  "肘底看捶": [ref("https://thetaichinotebook.com/2017/03/02/fist-under-elbow-and-natural-posture/", "Fist Under Elbow, and natural posture | The Tai Chi Notebook", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "左打虎势": [ref("http://discuss.yangfamilytaichi.com/viewtopic.php?t=840", "Changes to the Strike Tiger forms - Yang Family Tai Chi Discussion Board", "discuss.yangfamilytaichi.com", "© discuss.yangfamilytaichi.com")],
+  "右打虎势": [ref("http://discuss.yangfamilytaichi.com/viewtopic.php?t=840", "Changes to the Strike Tiger forms - Yang Family Tai Chi Discussion Board", "discuss.yangfamilytaichi.com", "© discuss.yangfamilytaichi.com")],
+  "左右穿梭": [ref("https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners", "Fair lady weaves at shuttles - four corners — Blackwater Tai Chi", "blackwatertaichi.com", "© blackwatertaichi.com")],
+  "转身摆莲脚": [ref("https://www.egreenway.com/taichichuan/sun73.htm", "Sun Taijiquan, International Standard Competition 73 Movements Form (covers Movement 69: Turn Body, Swinging Lotus Kick / Zhuan Shen Bai Lian)", "egreenway.com", "© egreenway.com")],
+  "云手（向右）": [ref("https://earthbalance-taichi.com/2013/10/chen-taiji-cloud-hands/", "Chen Taiji Cloud Hands (Yun Shou)", "earthbalance-taichi.com", "© earthbalance-taichi.com")],
+  "云手（快步）": [ref("https://earthbalance-taichi.com/2013/10/chen-taiji-cloud-hands/", "Chen Taiji Cloud Hands (Yun Shou)", "earthbalance-taichi.com", "© earthbalance-taichi.com")],
+  "金刚捣碓、收势": [ref("https://chenscotland.wordpress.com/2010/09/22/what-is-a-jin-gang/", "What is a \"Jin Gang\"? — Chen Tai Chi Scotland", "chenscotland.wordpress.com", "© chenscotland.wordpress.com")],
+  "铺地锦": [
+    img('/media/postures/spread-brocade-ground.webp', "Earth Dragon (Snake Creeps Down) — Dfw snake creaps", "Clftruthseeking", 'commons.wikimedia.org', "Public domain"),
+    ref("https://www.taijiworld.com/tai-chi-posture.html", "Snake Creeps Down Tai Chi Posture", "taijiworld.com", "© taijiworld.com"),
+  ],
+  "下步跨虎": [ref("https://thetaichinotebook.com/2024/04/04/retreat-to-ride-tiger/", "Retreat to Ride Tiger", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "提手": [ref("https://classicaltaichi.blogspot.com/2011/05/ti-shou-shang-shi-2-raise-hands.html", "Ti Shou Shang Shi - Raise Hands", "classicaltaichi.blogspot.com", "© classicaltaichi.blogspot.com")],
+  "左右玉女穿梭": [ref("https://www.everydaytaichi.org/maiden-working-the-shuttles.html", "Maiden Working the Shuttles", "everydaytaichi.org", "© everydaytaichi.org")],
+  "斜飞式": [ref("https://www.sam-ma.com/blog/tai-chi-long-form-diagonal-flying", "Tai Chi Long Form - Diagonal Flying", "sam-ma.com", "© sam-ma.com")],
+  "如封似闭·收势": [ref("https://www.everydaytaichi.org/apparent-closing.html", "Apparent Closing", "everydaytaichi.org", "© everydaytaichi.org")],
+  "右起脚": [ref("https://www.egreenway.com/taichichuan/sun73.htm", "Sun Taijiquan 73 Movements Form (movement #33, Right Toes/Separation Kick)", "egreenway.com", "© egreenway.com")],
+  "左起脚": [ref("https://www.egreenway.com/taichichuan/sun73.htm", "Sun Taijiquan 73 Movements Form (movement #32, Left Toes/Separation Kick)", "egreenway.com", "© egreenway.com")],
+  "翻身二起": [ref("https://www.egreenway.com/taichichuan/sun73.htm", "Sun Taijiquan 73 Movements Form (movement #35, Turn Over Body and Double Jump Kick)", "egreenway.com", "© egreenway.com")],
+  "玉女穿梭（一）": [ref("https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners", "Fair lady weaves at shuttles - four corners — Blackwater Tai Chi", "blackwatertaichi.com", "© blackwatertaichi.com")],
+  "玉女穿梭（二）": [ref("https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners", "Fair lady weaves at shuttles - four corners — Blackwater Tai Chi", "blackwatertaichi.com", "© blackwatertaichi.com")],
+  "玉女穿梭（三）": [ref("https://www.blackwatertaichi.com/blog/fair-lady-weaves-at-shuttles-four-corners", "Fair lady weaves at shuttles - four corners — Blackwater Tai Chi", "blackwatertaichi.com", "© blackwatertaichi.com")],
+  "玉女穿梭（四）": [ref("https://balancedlifetaichi.com/blog/fair-lady-works-shuttles-yang-style-tai-chi", "Fair Lady Works Shuttles - Yang Style Tai Chi", "balancedlifetaichi.com", "© balancedlifetaichi.com")],
+  "横单鞭": [ref("https://thetaichinotebook.com/2011/06/03/single-whip-dan-bian/", "Single Whip – 'Dan Bian'", "thetaichinotebook.com", "© thetaichinotebook.com")],
+  "左右揽扎衣": [ref("http://www.tcmwindow.com/taiji/Illustrations/movements/Lazy-About-Tying-Coat-in-form-of-Chen-Style-Taiji.shtml", "Lazy About Tying Coat in form of Chen Style Taiji (with image)", "tcmwindow.com", "© tcmwindow.com")],
+  "左右分脚": [ref("https://portal.sanctuaryoftao.org/2019/03/separate-foot-left-and-right/", "Separate Foot, Left and Right", "portal.sanctuaryoftao.org", "© portal.sanctuaryoftao.org")],
+  "预备起势": [ref("https://www.egreenway.com/taichichuan/TY1.htm", "Opening Posture of Taijiquan: Wuji, Standing, Raising and Lowering Hands (Qishi / Yu Bei)", "egreenway.com", "© egreenway.com")],
+  "左下势独立": [ref("https://www.everydaytaichi.org/serpent-in-the-grass-golden-cockerel.html", "Serpent in the Grass, Golden Cockerel (Snake Creeps Down / Golden Rooster Stands on One Leg) - Everyday Taichi", "everydaytaichi.org", "© everydaytaichi.org")],
+  "十字手收势": [ref("http://www.everydaytaichi.org/cross-hands.html", "Cross Hands - Everyday Taichi (Yang 24 Movements)", "everydaytaichi.org", "© everydaytaichi.org")],
+  "预备势 / 起势": [ref("https://www.egreenway.com/taichichuan/TY1.htm", "Opening Posture of Taijiquan: Wuji, Raise Hands and Lower Hands", "egreenway.com", "© egreenway.com")],
+  "回身右蹬脚": [ref("https://nwfighting.com/yang-24-form-tai-chi-movement-kick-right-heel/", "Yang 24 Form – Tai Chi Movement: Kick With Right Heel", "nwfighting.com", "© nwfighting.com")],
+  "弯弓射虎 / 收势": [ref("https://taiji-forum.com/martialmonday-4-bend-the-bow-to-shoot-the-tiger/", "#MartialMonday 4 – Bend the Bow to Shoot the Tiger", "taiji-forum.com", "© taiji-forum.com")],
 };
 
 // ---------------------------------------------------------------------------
@@ -233,12 +293,16 @@ export const POSTURE_MEDIA: Record<string, MediaSource[]> = {
 // ---------------------------------------------------------------------------
 const PREFIXES = [
   '左右', '转身', '进步', '退步', '上步', '回身', '翻身', '跳步', '践步',
-  '左', '右', '斜',
+  '太极', '左', '右', '斜',
 ];
 
 function lookupPostureMedia(hanzi: string): MediaSource[] {
   if (POSTURE_MEDIA[hanzi]) return POSTURE_MEDIA[hanzi];
-  let s = hanzi;
+  // Drop a trailing full-width parenthetical qualifier first: 云手（左） →
+  // 云手, 云手（右） → 云手. (Exact keys above already win, so distinct
+  // parenthetical variants we *do* catalogue keep their own media.)
+  let s = hanzi.replace(/（[^）]*）/g, '');
+  if (s !== hanzi && POSTURE_MEDIA[s]) return POSTURE_MEDIA[s];
   // Iteratively peel known leading qualifiers, checking for a hit each time.
   let changed = true;
   while (changed) {
