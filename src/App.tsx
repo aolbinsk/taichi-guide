@@ -7,6 +7,7 @@ import { Scrubber } from './components/Scrubber';
 import { FormSwitcher } from './components/FormSwitcher';
 import { useStore } from './state/useStore';
 import { getFormMeta } from './data/registry';
+import { attachMedia } from './data/mediaLibrary';
 import { UI } from './i18n/labels';
 
 export default function App() {
@@ -24,7 +25,8 @@ export default function App() {
     getFormMeta(formId)
       .load()
       .then((d) => {
-        if (!stale) setData(d);
+        // Enrich postures with catalogued image/video resources at load time.
+        if (!stale) setData(attachMedia(formId, d));
       });
     return () => {
       stale = true;

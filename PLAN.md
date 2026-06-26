@@ -74,6 +74,9 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
       capable; a bundled recording in `Media.audio` takes priority when present).
 - [x] Diacritic-insensitive fuzzy search + category tag chips.
 - [ ] **Content pass:** verify/replace seed translations & add real images.
+- [x] **Media research pass:** catalogued per-form demonstration videos (all 14
+      forms, multiple angles) + per-posture reference resources in a shared,
+      hanzi-keyed library (`data/mediaLibrary.ts`), attributed in `RESOURCES.md`.
 - [x] App icons (192/512 PNG) for installability.
 
 ### Phase 2 — Structural expansion
@@ -82,7 +85,10 @@ Every dataset is generated/best-effort and carries `verified: false` (shown as a
 - [ ] Richer fuzzy ranking (consider Fuse.js only if substring match proves insufficient).
 
 ### Phase 3 — Interactive media suite
-- [ ] Inline loopable `.mp4` (front/side); the card already reserves the slot.
+- [x] Inline video in the card: per-form demonstration clips (front / mirror /
+      step-by-step) embedded via YouTube; attributed gallery with reference links.
+- [ ] Self-hosted loopable `.mp4` per posture for true offline (rights permitting);
+      `scripts/localize-media.mjs` localizes poster thumbnails as a first step.
 - [ ] WebGL/Three.js skeletal rig viewer with orbit camera.
 - [ ] If native polish is needed, wrap the PWA in Capacitor (audio/haptics/3D).
 

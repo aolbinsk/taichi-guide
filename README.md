@@ -15,8 +15,11 @@ scrubber — built for use *during* practice, not for reading a wall of text.
 - **Fuzzy search** — diacritic-insensitive across English, Swedish, and pinyin
   ("krok" matches "krök", "lou xi" matches "Lóu Xī").
 - **Tag filters** — category chips (kicks, stances, hand deflections, …).
-- **Expandable cards** — hero image (lazy, no layout shift), description, and a
-  local audio pronunciation button; reserved slot for Phase 3 video / 3D rig.
+- **Expandable cards** — an attributed media gallery (whole-form demonstration
+  videos in front / mirror / step-by-step angles that play inline, plus
+  per-posture reference links), description, and a Mandarin pronunciation button.
+  Media is catalogued in [`RESOURCES.md`](./RESOURCES.md) and sourced from a
+  shared, hanzi-keyed library so one asset is reused across every form.
 - **Offline-first PWA** — installable, works with no network after first load.
 
 ## Stack

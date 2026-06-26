@@ -31,6 +31,45 @@ export interface Media {
   rig: string | null;
 }
 
+/**
+ * One concrete media resource (a video, photo, or reference page) for a posture
+ * or whole form, with the provenance needed to attribute it. The catalog in
+ * `data/mediaLibrary.ts` + `RESOURCES.md` is the single source of truth; the UI
+ * renders these as a small attributed gallery in the expanded card.
+ */
+export type MediaKind = 'video' | 'image' | 'page';
+
+/** Camera angle / role of a clip, so the UI can label "front view" vs "mirror". */
+export type MediaView =
+  | 'front'
+  | 'back'
+  | 'mirror'
+  | 'side'
+  | 'instruction'
+  | 'demo'
+  | 'detail';
+
+export interface MediaSource {
+  kind: MediaKind;
+  /** Canonical resource URL (YouTube watch link, image file, or reference page). */
+  url: string;
+  /** Human title, usually the original page/video title (kept for attribution). */
+  title: string;
+  /** Author / channel / photographer, when known. */
+  author?: string | null;
+  /** Provider or host, e.g. "YouTube", "commons.wikimedia.org", "egreenway.com". */
+  source: string;
+  /** License or rights note (e.g. "Public domain", "CC BY-SA", "© author"). */
+  license?: string | null;
+  /** Camera angle / role, for a UI label. */
+  view?: MediaView;
+  /** Optional start offset (seconds) for chaptered routine videos. */
+  start?: number;
+  /** Whether this came from the whole-form routine rather than the posture. */
+  formLevel?: boolean;
+  note?: string;
+}
+
 export type Tag =
   | 'stance'
   | 'kick'
@@ -48,6 +87,12 @@ export interface Posture {
   description: Description;
   tags: Tag[];
   media: Media;
+  /**
+   * Attributed media resources (posture-specific first, then whole-form
+   * routine clips) resolved from the shared media library at load time. Empty
+   * when nothing has been catalogued for this posture yet.
+   */
+  sources?: MediaSource[];
   /**
    * If this posture is a repeat of an earlier one, the `seq` of the first
    * occurrence; otherwise `null`. Lets the UI dedupe, cross-link, and badge
