@@ -263,6 +263,57 @@ Commons file page before any redistribution beyond private study.
 > GFDL-only images (e.g. Master Yang Jun's Golden Rooster / Bend Bow) were
 > deliberately **not** inlined — GFDL requires shipping the full licence text.
 
+### Yang Chengfu form-chart clips (CC BY 3.0 — positions APPROXIMATE)
+
+Cropped from a single Wikimedia montage of Yang Chengfu's form photos
+(`File:Yang_Chengfu_Form.jpg`, **CC BY 3.0, © Matthias Wagner**, 850×1831, an 8×14
+grid). The montage is **uncaptioned**, so each clip was mapped to a posture by
+**form-order sequence**, not verified identity — captions read "position approx."
+and some may show an adjacent movement. Files are `public/media/postures/yc-*.webp`
+(~180–230 px). Re-derive with `scripts/` montage tooling if a captioned/higher-res
+source appears. Postures with an already-verified image (Single Whip, Grasp Bird's
+Tail, Diagonal Flying, Snake Creeps Down, Commencing) were **not** overwritten.
+
+| Hanzi | Posture | Local file | License | Author | Commons file page |
+|---|---|---|---|---|---|
+| 预备势 | Preparation / Beginning | `yc-preparation-beginning.webp` (cell 0) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 提手上势 | Raise Hands and Step Up | `yc-raise-hands-and-step-up.webp` (cell 7) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 白鹤亮翅 | White Crane Spreads Its Wings | `yc-white-crane-spreads-its-wings.webp` (cell 8) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 左搂膝拗步 | Brush Knee and Twist Step (Left) | `yc-brush-knee-and-twist-step-left.webp` (cell 10) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 手挥琵琶 | Hands Strum the Lute | `yc-hands-strum-the-lute.webp` (cell 11) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 搂膝拗步 | Brush Knee and Twist Step | `yc-brush-knee-and-twist-step.webp` (cell 13) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 进步搬拦捶 | Step Forward, Deflect, Parry and Punch | `yc-step-forward-deflect-parry-and-p.webp` (cell 14) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 如封似闭 | Apparent Close-Up / Withdraw and Push | `yc-apparent-close-up-withdraw-and-p.webp` (cell 15) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 十字手 | Cross Hands | `yc-cross-hands.webp` (cell 17) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 抱虎归山 | Embrace Tiger, Return to Mountain | `yc-embrace-tiger-return-to-mountain.webp` (cell 18) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 肘底捶 | Fist Under Elbow | `yc-fist-under-elbow.webp` (cell 19) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 倒撵猴 | Step Back and Repulse the Monkey | `yc-step-back-and-repulse-the-monkey.webp` (cell 21) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 海底针 | Needle at Sea Bottom | `yc-needle-at-sea-bottom.webp` (cell 28) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 扇通背 | Fan Through the Back | `yc-fan-through-the-back.webp` (cell 29) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 撇身捶 | Turn Body, Chop and Punch | `yc-turn-body-chop-and-punch.webp` (cell 30) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 云手 | Cloud Hands | `yc-cloud-hands.webp` (cell 36) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 高探马 | High Pat on Horse | `yc-high-pat-on-horse.webp` (cell 39) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 右分脚 | Separate Right Foot | `yc-separate-right-foot.webp` (cell 40) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 左分脚 | Separate Left Foot | `yc-separate-left-foot.webp` (cell 41) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 转身左蹬脚 | Turn and Kick with Left Heel | `yc-turn-and-kick-with-left-heel.webp` (cell 42) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 左右搂膝拗步 | Brush Knee and Twist Step (Left and Right) | `yc-brush-knee-and-twist-step-left-a.webp` (cell 43) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 进步栽捶 | Step Forward and Punch Down | `yc-step-forward-and-punch-down.webp` (cell 44) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 右蹬脚 | Kick with Right Heel | `yc-kick-with-right-heel.webp` (cell 45) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 双峰贯耳 | Strike Opponent’s Ears with Both Fists | `yc-strike-opponent-s-ears-with-both.webp` (cell 46) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 转身右蹬脚 | Turn Body and Kick with Right Heel | `yc-turn-body-and-kick-with-right-he.webp` (cell 47) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 野马分鬃 | Partition of the Wild Horse’s Mane | `yc-partition-of-the-wild-horse-s-ma.webp` (cell 50) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 玉女穿梭 | Fair Lady Works the Shuttles | `yc-fair-lady-works-the-shuttles.webp` (cell 52) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 右金鸡独立 | Golden Rooster Stands on One Leg (Right) | `yc-golden-rooster-stands-on-one-leg.webp` (cell 56) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 左金鸡独立 | Golden Rooster Stands on One Leg (Left) | `yc-golden-rooster-stands-on-one-leg.webp` (cell 57) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 转身白蛇吐信 | Turn Body, White Snake Spits Out Tongue | `yc-turn-body-white-snake-spits-out-.webp` (cell 66) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 穿掌 | Palm Thrust / Cross Hands and Thrust Palm | `yc-palm-thrust-cross-hands-and-thru.webp` (cell 73) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 搂膝指裆捶 | Brush Knee and Punch Opponent’s Groin | `yc-brush-knee-and-punch-opponent-s-.webp` (cell 76) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 上步七星 | Step Forward to Seven Stars | `yc-step-forward-to-seven-stars.webp` (cell 80) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 退步跨虎 | Step Back to Ride the Tiger | `yc-step-back-to-ride-the-tiger.webp` (cell 81) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 转身摆莲 | Turn Body and Sweep Lotus | `yc-turn-body-and-sweep-lotus.webp` (cell 82) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 弯弓射虎 | Bend the Bow and Shoot the Tiger | `yc-bend-the-bow-and-shoot-the-tiger.webp` (cell 83) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+| 收势 | Closing of Tai Chi / Return to Origin | `yc-closing-of-tai-chi-return-to-ori.webp` (cell 111) | CC BY 3.0 | Matthias Wagner | https://commons.wikimedia.org/wiki/File:Yang_Chengfu_Form.jpg |
+
 ---
 
 ## Broad galleries & posture indexes
